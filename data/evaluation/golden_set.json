@@ -1,0 +1,2062 @@
+[
+  {
+    "example_id":1,
+    "customer_message":"[USER_ID] . They also failed to follow up with me when they said they would. Spent over an hour on the phone with the call center in Ghana?!?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":2,
+    "customer_message":"@AmazonHelp I am fed up following that process. Again and again. Give me the no of ur executive who is claiming this delivery. Show me my sign?\n@AmazonHelp [USER_ID] I haven’t got this package. Please stop sending this same mail to me. Just deliver my package. #STOP harassing #Amazon [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":3,
+    "customer_message":"@AmazonHelp Vendido por Amazon.\nCuando compras un producto en [USER_ID]  y te envían un reacondicionado aunque habías pagado precio de nuevo. [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":4,
+    "customer_message":"@AmazonHelp [USER_ID] Received the correct order today. Thanks!\n@AmazonHelp Yes...was great! The agent was helpful and the replacement is scheduled for Monday. Thanks!\nWas chatting to a customer care executive for a wrong order by [USER_ID]. I realized I was using [USER_ID]'s Virtual Chat -  the first product I started [USER_ID] work on. So proud...I stopped being agitated with the wrong order. [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":5,
+    "customer_message":"@AmazonHelp Already handled, just venting. It was a pretty big bummer.\n[USER_ID], it’d be nice if the book I waited 4 months for wasn’t damaged inside of an undented box. #twinpeaks #twin… [URL] [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":6,
+    "customer_message":"@AmazonHelp ありがとうございます、安心しました。\nぎゃーん！\nアマゾンの請求先が会社になってるってばよ！！\nやべぇ！マジでやべぇ！\nいつからだ？！\nなんてこったい\n休み明けに連絡しよう、そうしよう",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":7,
+    "customer_message":"@AmazonHelp Yes today but the tracking doesn't show me where it is or guarantee it'll even be delivered. I'm already talking to your support team about it.\n@AmazonHelp As it stands right now they have literally no idea where my package went despite me being able to confirm that your delivery folks showed up and said they couldn't find the package on their truck\n@AmazonHelp It was supposed to be delivered yesterday. I spoke to a rep about this as they rescheduled without telling me and he assured me it would be delivered this AM but it was not and I have no updates on it (not scanned back into the warehouse yesterday)\n@AmazonHelp So they're telling me repeatedly \"it's out for delivery\" but there's literally no way they can know that as the shipping update said that from yesterday, not for today. Today it's not even at \"out for delivery\"\n@AmazonHelp It shipped out on Thursday to be delivered yesterday, it's not out for delivery today, and I'm frustrated\n@AmazonHelp Here's the tracking info that I've got from your end right now. Out for delivery yesterday morning but never showed up. The request wasn't submitted by me, it was submitted by a rep I spoke to last night [URL]\n@AmazonHelp I'm being told \"since it's out for delivery let's just wait for the package\" which frankly i find insulting.\n@AmazonHelp Either that or a $13 discount. This is ridiculous.\n@AmazonHelp They keep telling me it's out for delivery but on my end it isn't. The rep I'm talking to has told me \"it's being delivered tomorrow now\" which, no, I wanted it Friday.\n\nAnd the rep last night assured me it would be delivered today.\n@AmazonHelp So the rep I'm speaking to is saying \"let's just wait\" and \"we'll give you $13 off\" and it's absurd to me because, like I stated, the drivers showed up to my residence, took every package off their truck, and could NOT find mine in them.\n@AmazonHelp I'm pretty sure the package was lost to be honest here and I'm extremely frustrated\n@AmazonHelp  [URL]\n@AmazonHelp Done but I doubt anything will be done\nSo it turns out that amazon scanned my package out of their warehouse, showed up to my house to deliver it, but somehow the package wasn't on their truck",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":19
+  },
+  {
+    "example_id":8,
+    "customer_message":"When Amazon sends you a picture of where they left your package but it's not your house... [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":9,
+    "customer_message":"@AmazonHelp  [URL]\nThanks [USER_ID] for helping me waste my day waiting on a parcel which failed to come even though it should have been here by 8pm",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":10,
+    "customer_message":"@AmazonHelp わわ、ご丁寧にありがとうございます！楽しませていただきます(*´꒳`*)\nなんか気づいたらkindle unlimited登録してたけど月1000円で本いっぱい読めるの最高すぎでは？？",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":11,
+    "customer_message":"@AmazonHelp Da ist nur noch das Fire Tablet gelistet. Der Dot nicht. [USER_ID] und [USER_ID] können Hue auch nicht mehr ansteuern. Generelles Problem anscheinend?\nDieses Gerät ist nicht aktiviert.... #echo #alexa #dot #hue @AmazonHelp",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":12,
+    "customer_message":"@AmazonHelp 表示されました。\nありがとうございました。\n@AmazonHelp chromeのバージョンは　バージョン: 62.0.3202.89（Official Build） （64 ビット）\nedgeは　Microsoft Edge 40.[ZIP].674.0\nです。",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":13,
+    "customer_message":"@AmazonHelp yes. Twice\n@AmazonHelp man on support was very helpful. Will see if fix holds\nSo [USER_ID] why do l have to unplug the fire stick every time I use [USER_ID] - shameful designed obsolescence?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":14,
+    "customer_message":"@AmazonHelp 😄 Proximamente en mi canal de #youtube [URL]\n[USER_ID]  prime gracias hasta ahora no me haz fallado 💆‍♀️ [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":15,
+    "customer_message":"@AmazonHelp [URL]\nEuh [USER_ID] c'est normal que mon #SuperMarioOdyssey soit pas encore expédié alors qu'il doit être livré demain !! Ça me fait peur un peu 😣",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":16,
+    "customer_message":"Hey [USER_ID] ur people spam call everyday without fail. This fellow tells me got details including addresses from [USER_ID] Why is this dirty work Amazon? [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":17,
+    "customer_message":"[USER_ID] [USER_ID] Je suis grave intéressé, dispo dm ? (j'ai quelques questions)\nJe vends mon Sony A7 première version acheté sur [USER_ID] en juillet dernier, quasi jamais utilisé 500€ #a7Mk1",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":18,
+    "customer_message":"@AmazonHelp It was delivered by amazon itself. How do I report it on the app? I seem to get lost in an endless loop when I go via that link\n@AmazonHelp hi amazon, apparently a package has been delivered when it hasn’t, how do I report it?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":19,
+    "customer_message":"@AmazonHelp Nope.  Said package was \"Undeliverable\" which makes it unique among the thousand packages you have delivered to me.  No attempt to contact.\n@AmazonHelp For an item that was never delivered?  Whats your guess?   Geez i hate bots....\n@AmazonHelp There was no reason for the order to not be delivered.  Do not contact me further in this matter.\n@AmazonHelp I have advised you not to contact me in this matter again.  If you continue to do so i will seek redress from Twitter TOS\n[USER_ID] Farming out delivery to too many tiny carriers. Item came from 10 miles away, was to be delivered yesterday 8pm.  Response from Amazon none\n[USER_ID] is slipping badly on delivery times and cost me revenue on a YouTube video. Too big to fail?  I won't trust them any longer.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":10
+  },
+  {
+    "example_id":20,
+    "customer_message":"@AmazonHelp Yes actually. I ordered something using amazon prime on Wednesday the 25th and it says it won’t be delivered until Monday the 30th\n[USER_ID] why do I pay for amazon prime if it still takes more than 2 days for me to get my items?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":21,
+    "customer_message":"I ordered something on [USER_ID]  the other day and it says its \"not yet shipped but its also \"arriving today\" so idk how to feel",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":22,
+    "customer_message":"[USER_ID] @AmazonHelp is the worst in responding to a package complaint",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":23,
+    "customer_message":"Unlimitedscreaming [USER_ID]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":24,
+    "customer_message":"@AmazonHelp I have done thank you.\n@AmazonHelp Ok if I could get a phone number that would be great.the link doesn't give me a number.\n[USER_ID] speeding swinging about driving up people's arses and it says Amazon prime all over his truck He is crazy!! Reg number SH66 NDN",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":25,
+    "customer_message":"Getting tired of waiting for Amazon delivery!! [USER_ID] @AmazonHelp. Called the customer service 3 times already.\n[USER_ID] @AmazonHelp Have filled the form.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":26,
+    "customer_message":"[USER_ID] few days ago i mailed you my problem, it looks like you don't want to solve my issue! Done with amazon! bye-bye shit",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":27,
+    "customer_message":"@AmazonHelp あああ……いえ、今は指定時間少し過ぎてるだけなのでそこまで気にしてないです大丈夫です\nすみませんありがとうございます\nAmazonからの荷物来ないぽよーーーーー",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":28,
+    "customer_message":"So [USER_ID] messages you if the prices of items in your cart has decreased but not when they've increased. Valid reason ?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":29,
+    "customer_message":"@AmazonHelp I will wait. Maybe the one that was shipped today by DeutschePost will arrive on Tuesday. Also the shipment is not trackable :(\n@AmazonHelp Also why is the DeutschePost shipment not traceable?\nWhy is are my [USER_ID] orders going to arrive on wednesday and not on tuesday. Come on Amazon you can do better.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":30,
+    "customer_message":"[USER_ID] Bad day with amazon today 3 items not del sat in all day \namazon say attempt to del 3.44 not so he would have to walk past the window were a sat and one was a book would fit letter box \n3 del this all fine till this mad me mad amazon prime no thanks 🤬",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":31,
+    "customer_message":"@AmazonHelp Thanks - any kind of ETA on a fix for this?\n@AmazonHelp Are you aware that only the first 25 mins of Chicago Fire 6x02 are on Amazon Video? Not cool...",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":32,
+    "customer_message":"[USER_ID] [USER_ID] Not to be dense, but I'm a little confused about how this works in terms of proving I'm a prime member. Do I show them my phone or something?\nThanksgiving savings worth celebrating from us and our friends at [USER_ID] 🙌 [URL] 💚 [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":33,
+    "customer_message":"Don’t think these new [USER_ID] delivery drivers even bother attempting to deliver! Been home various times when supposedly no one in!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":34,
+    "customer_message":"化粧品の補充やらお薬やら注文ついでに密林プライム登録したった( ´ω｀)ﾑﾌｰ",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":35,
+    "customer_message":"@AmazonHelp Respekt. Das nenne ich mal internationalen Support :D\nAlles gut. Hatte seit der Umstellung auf Amazon Logistics 3 oder 4 mal bestellt. 3 mal wars gut (bzw unauffällig) und einmal schlecht. Das eine negative Erlebnis bleibt natürlich eher in Erinnerung. Aber danke der Nachfrage :)\n[USER_ID] Amazon Logistics has been in my town for like half a year by now ... and everyone I know who ordered something has made at least one bad experience with them :(",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":36,
+    "customer_message":"Amazon Music のこのプレイリスト、映画好きには効きすぎてヤバい [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":37,
+    "customer_message":"@AmazonHelp Yes! Hasn’t shipped yet. Delivery was today.. pre order was for today.\n@AmazonHelp Just shipped TODAY! Delivery on MONDAY!! So much for playing 4 days early...like I paid for. Thanks [USER_ID] [USER_ID] [USER_ID] 4Nothing.\n[USER_ID],  would be nice to play [USER_ID] #WWE2K18 four days early like I was promised!! Oh wait, I CANT! [USER_ID] #annoyed",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":38,
+    "customer_message":"@amazonhelp Is this an acceptable contact for [URL] orders? Need some quick help",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":39,
+    "customer_message":"@AmazonHelp Will do that now.  Thanks for listening.\nDelivery of cardboard boxes, in the manufacturers shipping box packed in yet another box by [USER_ID]  #inception",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":40,
+    "customer_message":"Amazonで買ったHDMI延長ケーブル、全く違う商品が届いた。マケプレだと返品手続きどうなるんだろ？",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":41,
+    "customer_message":"@AmazonHelp Just called in for customer support and you solved my issue within 5 minutes. Thank you for great customer service. 👍😀",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":42,
+    "customer_message":"アマゾンジャパン(株) からの詐欺メール来た。あるんだなー、こういうの。\nそもそもアマゾンで有料のやつ使ってないし、通販も年単位で使ってない",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":43,
+    "customer_message":"Didn't realise anything was fishy until it asked me to confirm my mum's maiden name and bank details. [USER_ID] customers beware #scam [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":44,
+    "customer_message":"Instead of my frozen chicken I got rotten bananas and raisins... why do u hate me [USER_ID] ??! [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":45,
+    "customer_message":"@AmazonHelp I'll DM you the details\n@AmazonHelp why hasn't my order been shipped yet it was released yesterday annoyed yet again",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":46,
+    "customer_message":"[USER_ID] mi ha regalato un  Natale anticipato, così ho potuto compilare la mia gift list 🎁 #amazonxmas2017 [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":47,
+    "customer_message":"For the first time ever Amazon prime let me down 😩",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":48,
+    "customer_message":"Nice one [USER_ID] this interesting cardboard gear you left meshed perfectly with the gate bars spinning round and around. [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":49,
+    "customer_message":"@AmazonHelp hola, tengo Amazon Prime (y Video) en Chile. Quisiera saber si mi Roku 3 soporta este servicio en español, pues la consola XBox que tengo si lo hace.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":50,
+    "customer_message":"@AmazonHelp Order has already been placed for the 3rd time.   Even with upgraded shipping it will take a week to arrive. 😠\n[USER_ID] Continues to fail customers. They sent a 'paper email' about an item not shipping. Item was ordered correctly. #Amaz-ingfail [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":51,
+    "customer_message":"@AmazonHelp Just a general question. When you call Amazon and request a U. S representatives you can’t get one because the offices are closed.\n@AmazonHelp The question is why can’t we get a U S representative on demand?Why not offer it to your US Prime Members?\n@AmazonHelp Why can’t you get a U. S representative on demand?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":52,
+    "customer_message":"@AmazonHelp Except I’m in South Africa at the moment and this friend of mine was going to bring the package to me since you don’t deliver to South Africa?\n@AmazonHelp [URL]\n@AmazonHelp I can email. That’s about it. Can’t call through to the states from here\n@AmazonHelp I mailed them. They will get back to me in 12 hours?\n@AmazonHelp Order was bought off amazon...\nDear [USER_ID] .. why when we tick and pay for 1 day delivery, does it now say delivery 5th of Dec? Only after we paid for it? The person traveling to South Africa is leaving on Wednesday hence the need for fast delivery... 😡",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":12
+  },
+  {
+    "example_id":53,
+    "customer_message":"@AmazonHelp ...well? What do I do about this? &amp; how do I find these limits &amp; who to I talk to about changing them? I need this item...?\n@AmazonHelp Soooo, what's going on here? Item is in stock - I need another hard drive, keeps telling me I can't buy the hard drive? [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":54,
+    "customer_message":"@AmazonHelp Paperwhite, thanks for speedy reply\n[USER_ID] is this correct? Very annoying [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":55,
+    "customer_message":"@AmazonHelp Vielen Dank :) ich hoffe,von euch zu hören :)\n@AmazonHelp Perfekt.Vielen Dank und auch nen guten Start :)\n[USER_ID] Sind die zeitlich gestaffelt die Angebote?Ihr werbt mit Westworld (siehe Bild),aber Westworld kostet nachwievor unverändert den vollen Preis iHv 28,99 €.\nDie Cyber Monday Woche geht los. Jetzt Angebote sichern! \n&gt;&gt;&gt; [URL]\n\nSchnäppchenjäger aufgepasst: Von 20. bis 27. November gibt es aktuelle Blockbuster und Serien bis zu 50% günstiger. Jetzt bei Amazon Video! [URL]\n[USER_ID] Wisst ihr wann es mit Doctor WHO auf Prime Video weitergeht?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":9
+  },
+  {
+    "example_id":56,
+    "customer_message":"@AmazonHelp \"Entrega estimada para 15\/dez - 29\/dez\"\nPedido nº [PHONE]-4554617\nA compra foi realizada na pré-venda no dia 22\/10\/2017.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":57,
+    "customer_message":"Amazonの商品が届かなかったから返金を要請したのに全然返してくれないからまた返金要請したら、またしても謝罪の言葉も無くAmazonのギフトカードだけ送ってきたｯ‼💢💢\nってか、現金で返せやｯ‼😠😠\nAmazon最低過ぎるｯ💢💢💢💢",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":58,
+    "customer_message":"[USER_ID] [USER_ID] [USER_ID] can you buy it on [USER_ID] ? #thelastpost\n[USER_ID] ; [USER_ID] ; Please I wanna watch #TheTastPost series. How could i.? I'm from #Aden. It too important &amp; interesting to me. I would be grateful.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":59,
+    "customer_message":"[USER_ID] can you guys expand to Yakima WA [ZIP]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":60,
+    "customer_message":"@AmazonHelp got an email reminding me that i have yet to collect my order but i already collected it a few days ago? can i ignore that?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":61,
+    "customer_message":"きめた！！Kindle fire買う！もう、論文の束とか、本の束とか、あれで読んでやる！！",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":62,
+    "customer_message":"@AmazonHelp Hello,\nI do not want to contact the seller.\nI want to contact amazon.de\nPlease send me an email address.\nfredrik\n[USER_ID] How do I contact you? I can not find an email address at amazon.de",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":63,
+    "customer_message":"@AmazonHelp will the status go back to Friday 13th if I change it to one day delivery cause on standard delivery it says Saturday 14th",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":64,
+    "customer_message":"@AmazonHelp You're welcome. Glad you're on it. ;)\nHey [USER_ID], did you know that the \"Literature &amp; fiction\" filter under the \"Fiction\" sub-menu in your Books department actually brings up \"Erotic literature &amp; fiction\"? No, nor did my 12yo daughter. My lawyers will be in touch... \n\n(Joking, but better fix it quick, eh?) [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":65,
+    "customer_message":"Hi amazonIN Please check my conv. with your #Customerservice &amp; tell me \n1 How come 5-10 days from 17th Nov. constitute to 1st Dec.?\n2 When an item takes max 2-3 days to reach me, why it takes 5-10 days to reach you?\nAre you running some different maths h… [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":66,
+    "customer_message":"@AmazonHelp Ok merci c'est réglé !\nHelp [USER_ID] un produit était manquant dans le colis de ma dernière commande livrée et cas non prévu dans vos FAQ 🤔 je fais comment?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":67,
+    "customer_message":"@AmazonHelp j'ai contacté TNT, mais pas votre SAV, vu que le colis était déjà expédié. Que dois-je faire?\n@AmazonHelp je demande juste une annulation pure et simple de la commande. Rien de plus.\n@AmazonHelp Merci pour votre aide. Bonne journée à vous.\n@AmazonHelp je viens de remplir le formulaire. Ca me propose ça. Mais vu que l'article n'est pas arrivé, je dois cocher quelle option? [URL]\n@AmazonHelp il est retourné chez vous. Ensuite? [URL]\n@AmazonHelp Très bien, donc je choisis quelle option? [URL]\n@AmazonHelp parfait! je ne vous dérange plus, bonne journée à vous!\nBonjour, @AmazonHelp. Suite erreur de [USER_ID], je n'ai pu recevoir mon colis 5 jours après l'avoir commandé. Comment annuler? Merci. [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":16
+  },
+  {
+    "example_id":68,
+    "customer_message":"@AmazonHelp Muchas gracias😊\n[USER_ID] una pregunta tengo miedo de comprar una tableta gráfica ya que es mucho dinero y no se si funcionaria, si no funciona me devuelven el dinero o me cambian por otra? Me quedaria mas tranquila saberlo antes de comprarla, Gracias. 😊",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":69,
+    "customer_message":"@AmazonHelp sorry to tell you, I'm unable to process the order and Customer Care Number doesn't work. It say, \"we are unable to find any order\"\n[USER_ID] I'm facing problem placing a order,any on call assistant number you guys can provide,who will help me out with the same. @AmazonHelp",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":70,
+    "customer_message":"@AmazonHelp Ahora fueron unos vinilos, unos blurays y un juego de Switch\n@AmazonHelp Gracias a Waters la colección ya es mediana pero esta vez me armé el OST de Inception y el primer disco de Gorillaz\n@AmazonHelp Estos son al momento, estoy en espera del de Interstellar que viene de Estados Unidos [URL]\n@AmazonHelp Creo que será el de Harry Potter o algo más del maestro John Williams\n@AmazonHelp Lo bueno es que tengo prime y la espera es más corta [URL]\nMadurar es dejar de esperar a Santa Claus y ansiar la llegada del señor de [USER_ID]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":12
+  },
+  {
+    "example_id":71,
+    "customer_message":"@AmazonHelp Done, thank you!\n\nSorry for not noticing the more detailed feedback button!\n[USER_ID] Please forward this to the Echo\/Alexa team. I feel like some poor kid is going to accidentally activate this! [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":72,
+    "customer_message":"how could u do this to me [USER_ID] [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":73,
+    "customer_message":"アマゾンマーケティングサービスとやらからSMS来た！法的手続きに移行されたらどうしよう((((；ﾟДﾟ)))))))\n恐怖で夜も眠れない( ´Д`)y━･~~ [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":74,
+    "customer_message":"@AmazonHelp I have. I was told it was a new driver. They then asked for directions. The address is not hard to find. #PoorCustomerService\n.[USER_ID] Maybe you could invest in #GPS for your [USER_ID] deliveries.They can't find an address they delivered to last week!#PoorService",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":75,
+    "customer_message":"my enail still hasn’t come &amp; I’m pissed [USER_ID] [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":76,
+    "customer_message":"@AmazonHelp I did. Twice. Can you fix that UX, please?\nhey @AmazonHelp, you keep using a courier to send to a Pickup Point affiliated with [USER_ID], that refuses deliveries.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":77,
+    "customer_message":"[USER_ID] hey! How abt adding the feature of writing on the Kindle too? Just like a digital rough pad with a stylus where we cld highlight text n make notes too.It's a great feature and has great usability. In case u do send me one as a gift for giving u this idea [USER_ID]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":78,
+    "customer_message":"@AmazonHelp - paying for prime membership and same day delivery, yet my package is far from delivered 4 days already. Already wonder if I should keep the membership [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":79,
+    "customer_message":"@AmazonHelp Shall do. Thank you. :)\n[USER_ID] Hey Amazon! Where can I speak to a customer care representative? The usual 1800 number doesn't seem to have that option anymore.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":80,
+    "customer_message":"@AmazonHelp hi, I got the fire hd 10. Can I change Alexa's voice to the British accent? How? Thanks",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":81,
+    "customer_message":"S\/o [USER_ID] [USER_ID] y’all are some great people👌🏼✊🏼",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":82,
+    "customer_message":"@AmazonHelp Desktop web. If you click the Cart button, you can indeed Save For Later. If you Proceed to Checkout, though, no such option. So on me for pressing the wrong button. Still makes no sense to take away an option on that screen, but the option is there if you go to the right place\nHow is [USER_ID] a real thing? Their order experience is horrid. If you add multiple items to the cart, you can't just place an order of 1 item. No way to save those items off. You have to delete 1 at a time like a caveman.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":83,
+    "customer_message":"[USER_ID] thank u for #Arjunreddy movie",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":84,
+    "customer_message":"@AmazonHelp dois livros e um mangá pra mim, mais dois livros de presente de migo secreto\nComprei coisas na [USER_ID] hoje de manhã e já enviaram meu pedido. Baita eficiência!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":85,
+    "customer_message":"amazonプライムビデオ、再生エラーが多いです",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":86,
+    "customer_message":"[USER_ID] muchas gracias por cuidar del comprador. Felicitaciones a Fiorella de atención al cliente (chat) por su eficiente servicio y pronta respuesta ante el problema que me resolvió.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":87,
+    "customer_message":"@AmazonHelp E-mail sent. Thank you\nStill no sign of my [USER_ID] order... 😒😒😒 @AmazonHelp order tracking still says expected on the 28th...",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":88,
+    "customer_message":"なんかamazonの会員タイプがプライムになってた",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":89,
+    "customer_message":"[USER_ID] It's been 3 weeks and I am following up with customer care but still have no idea about my phone.Please help me with this",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":90,
+    "customer_message":"Amazon Musicのプレイリストは仕事中に流すのによさそう。90年代J Popとか！東京事変とか！",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":91,
+    "customer_message":"These are the moments I regret buying [USER_ID] [USER_ID] [USER_ID] \nwhy on earth would I not buy a Hardcover! [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":92,
+    "customer_message":"[USER_ID] HI, I bought Nokia 6 from amazon ORDER # [PHONE]-881071. Mobile Camera, Battery backup not that good as you describe :(",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":93,
+    "customer_message":"@AmazonHelp did somebody steal the parcel using or was the email maybe sent out by mistake? can i DM you order details?\n@AmazonHelp just got an email telling me my parcel has been collected but I haven‘t collected it?!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":94,
+    "customer_message":"[USER_ID] comment fait on pour vous contactez? le numéro 08 00 94 77 15 n'est plus attribuer, on m'a piraté mon compte hier! 😡",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":95,
+    "customer_message":"ずっと韓ドラをTSUTAYAで借りてたけど、Amazonプライム会員になってから財布気にすることなくいっぱい見れてる！",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":96,
+    "customer_message":"@AmazonHelp Ever since you switched from using mostly UPS to USPS in my area. Maybe my local USPS is overwhelmed, though their Sunday delivery is nice.\n@AmazonHelp Yes, I do. Usually I don't whine for whining's sake. Santa doesn't like that.\n@AmazonHelp Yes, I do know the difference. Yes you have missed it consistently since the beginning of this year. Once it's shipped, your 2-day transit time is either 2 or 3 or 4. Very hit or miss.\n.[USER_ID] You should change your Amazon Prime 2-day delivery to within 2 of 2-day delivery. It's been a while since you delivered on time in my area.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":8
+  },
+  {
+    "example_id":97,
+    "customer_message":"@AmazonHelp No vinay has sorted it. Thanks\n[USER_ID] why cant I reply to an email from customer service?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":98,
+    "customer_message":"Not sure this is the best way to leave a parcel on a busy main road [USER_ID]  #suchasafeplace [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":99,
+    "customer_message":"@AmazonHelp Yeah... OK. I’ve been a Prime member for a long time, and I just remember when I used to get my items in 2 days. Feels like that 2-day shipping policy has “evolved” over time, and not in a customer friendly way.\n[USER_ID] So, if I order an item with Prime “2-day shipping” on Thursday at 1PM EST, why is it guaranteed to be delivered by the following Tuesday?? That’s NOT 2 days. That’s not even 4 days. It’s Prime 5-day shipping! You’ve been slipping for awhile now, #Amazon. Get it together!!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":100,
+    "customer_message":"@AmazonHelp When no one can contact me then how can I refused to take delivery. \nYour message is received that I can refused delivery.\n@AmazonHelp Many time contact. But main things is that your delivery agency misbehaving .\n@AmazonHelp Refund is received 259 .\nItem purchase price 285\nOrder cancel by mistake of your. \n&amp; You deducted 25. \nWhat's my fault?\n[USER_ID]  my order is return due refusing delivery by me. But no one can contact me or come, then how can it happen to refused it.  My\nOrder No. Is '[PHONE]-0735520'\n@AmazonHelp Refund is received 259 .\nItem purchase price 285\nOrder cancel by mistake of your. \n&amp; You deducted 25. \nWhat's my fault?",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":10
+  },
+  {
+    "example_id":101,
+    "customer_message":"[USER_ID] very poor service and cheating done by amazon.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":102,
+    "customer_message":"[USER_ID] Support sucks! Sent TWO orders to wrong carrier facility on Friday which were supposed to arrive on Sunday. All chat support can say is \"Sorry\" and wait until it arrives! No way to track where the two orders even are at this point!\n\nPiss poor customer service!!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":103,
+    "customer_message":"AmazonでCOD頼んだけどめっちゃ届くの遅い( ´･ω･`)\n3か月前に注文してたはずなのに",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":3
+  },
+  {
+    "example_id":104,
+    "customer_message":".[USER_ID] The great Indian chutiyapa ....Will you even bother to answer this empty packet with NO WATCH? [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":105,
+    "customer_message":"[USER_ID] I preordered a book that should have came yesterday and now it says it won’t come till the 28th. What is the point of preordering if the book isn’t going to come on time.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":106,
+    "customer_message":"@AmazonHelp Venditore marketplace, con corriere Amazon Logistics\nOrdino due libri, [USER_ID] mi ritarda la consegna di 10 giorni, al decimo giorno ancora nessun pacco alla porta. Chiedo rimborso spese di spedizione, non è mai arrivato. OK.",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":107,
+    "customer_message":"[USER_ID] can u pls update on delivery status? No update for entire day [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":108,
+    "customer_message":"Got an email from [USER_ID] \"your parcel has been left in safe place\" and sends me this photo. An expensive item and you have left it like that? [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":109,
+    "customer_message":"@AmazonHelp I understand. But these items (baby diapers) were devoid of delivery charges till last month. Now, ALL vendors are charging.\n@AmazonHelp And no one is delivering before 5 days. Noticed this since a few weeks. Why the change?\n@AmazonHelp Thanks. Hope to see a change soon. Or I'll be compelled to buy stuff from brick &amp; mortar stores.\n[USER_ID] I used to buy stuff at 0 delivery charges with Prime, delivered the next day. Now, I'm paying 75-100 bucks for a 7-day delivery!",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":7
+  },
+  {
+    "example_id":110,
+    "customer_message":"アマゾンでゲーム買おう思ったら、商品情報ではコンビニ支払い出来るて書いとるのに、レジでは選択出来ん。\n何でや！",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":111,
+    "customer_message":"Amazon India site down? [USER_ID]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":112,
+    "customer_message":"[USER_ID] ...Mene 30 Sept se phone pick up ke liye request bhej di hai ..Pr apki or se koi rpy nahi a raha ..Sivay ke wait kro.....",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":113,
+    "customer_message":"Nice job [USER_ID] @AmazonHelp #FAIL [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":114,
+    "customer_message":"[USER_ID]  [USER_ID] \nToo many books I buy - Too many plastic wraps I had to dispose. Can't it be made a little eco-friendly? 🤔 [URL]",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":115,
+    "customer_message":"[USER_ID] I had a very bad experience with your customer rep. I was not able to deny delivery of the phone because it was given to the mail room without my consent. ORDER # [PHONE]-9492339",
+    "intent":"general_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":116,
+    "customer_message":"Hi [USER_ID],\n\nCould you please either hide the home bar in your iOS app or give us an option to? I’m reading at night and, as you can see, it’s easily the brightest thing on the page. #TheBeaconsAreLit #GondorCallsForAid [URL]",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":117,
+    "customer_message":"@AmazonHelp [USER_ID]\nHaving so much trouble with @amazonhelp recently had 3 parcels ‘delivered’ and none are anywhere to be seen but apparently handed to me....",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":118,
+    "customer_message":"@AmazonHelp Wenn Ihr denn auch die Befüllung liefern könnt?! Oh wait... Da war irgendwas so vong Gesetzgebung her 😂😂😂😂😂\nErm [USER_ID], was wollt Ihr mir eigentlich sagen? Das kann echt kein Remarketing gewesen sein; was war da denn die Datenquelle?! Mein verpeiltes Rumgeklicke in Eurer App?! 😂😂😂 #SEA #OnlineMarketing [URL]",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":119,
+    "customer_message":"@AmazonHelp supposed to be delivered today and now app is saying won’t be here until Wednesday possibly. On line with CS\nLiterally cannot even being to explain how disappointed I am with Amazon prime. Like I need this item for my event tomorrow. @AmazonHelp",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":120,
+    "customer_message":"@AmazonHelp [USER_ID] dear team you are [URL] guys world's best customer service company. I really appreciate ur work and honesty.tnx\n@AmazonHelp dear they refused for any latter. I send their visiting card plz cross chack\n@AmazonHelp since last 27 October  I am trying to get proper solution.\n[USER_ID] [USER_ID] I buy 1 year warranty period phone n now ur team ask 4 go to local shop n repair the phone even product is in warranty\n@AmazonHelp no need to this as today ur team said go to local shop and repair product. Seller paid bill. Why I go local shop for this prodct\n@AmazonHelp service center clearly said dat dis model is old so we dint give any service ur team said go to loacal shop n seller paid chargs\n@AmazonHelp @8105 product is in warranty period. Service center refuse for service then why you sell this type product on ur site\n[USER_ID] [USER_ID] Amazon.in Order # [PHONE]-6277910",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":13
+  },
+  {
+    "example_id":121,
+    "customer_message":"@AmazonHelp Yes I'm. I would have been happier had this order not taken so long. Thanks anyway.\n[USER_ID] Ok Amazon order was successful just after I sent this tweet.\n[USER_ID] could you please check why order [PHONE]-2018701 is still in pending status? How long will it take to get benefits activated?",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":122,
+    "customer_message":"@AmazonHelp But the link took me to this..... [URL]\n@AmazonHelp Oh I went on the contact thing, that’s useless, still no answers\n[USER_ID] hi, my Amazon Echos have apparently been “arriving today” for the last 3 days!?! What’s happening?",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":123,
+    "customer_message":"@AmazonHelp Getting errora [URL]\n@AmazonHelp Yes I am located in Canada\n@AmazonHelp having problems",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":124,
+    "customer_message":"@AmazonHelp  [URL]\n@AmazonHelp I have tried Jaipur Rajasthan as well as Delhi.\n@AmazonHelp [USER_ID] Getting error while buying this book. resolve the issues [URL]",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":125,
+    "customer_message":"[USER_ID] I get drivers are busy as hell people, but that's not cool. I sometimes wonder with prime how worth it is these days. 3\/3\n[USER_ID] there's also the fact I've been indoors all day with barely any noise and the little bugger delivered it without knocking 2\/3\nI swear [USER_ID] delivery drivers get worse and worse, name is on the box, the delivery recipient is massively misspelled 1\/?",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":126,
+    "customer_message":"o app novo do [USER_ID] está sensacional. finalmente olharam pra ele, que tava bem esquecido no churrasco",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":127,
+    "customer_message":"[USER_ID] package 4 another person delivered to my house, what should I do? Your in-app customer service options are useless and frustrating",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":128,
+    "customer_message":"Very disappointed to receive fake [USER_ID] power pack from @3710 [USER_ID]. [URL]",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":129,
+    "customer_message":"@AmazonHelp Thats a standard reply and i am not satisfied with the same and would like to file a complaint to escalate further\n@AmazonHelp I have explained the issur in detail that it was a technical fault at ur end which was accepted by ur call centre\n@AmazonHelp No call back or resolution recieved😡\n@AmazonHelp Have updated my details\n[USER_ID] There was no error the exchange offer was displayed on the product but when i wanted to avail it the exchange tab was not appearing\n[USER_ID]  such shabby service offer of extra 4k on exchange displayed on app &amp; customer cant avail bcoz of technical issue at ur end [URL]\n@AmazonHelp As a part of the sale running there was an extra 4k on exchang on oneplus 5 phone now due to some issue at ur end im not able to avail it\n@AmazonHelp I think u r missing the point here the ..its not about availability ur team confirmed that there is some technical issue amazons end\n@AmazonHelp Sorry but that does not help..because of a fault of amazon im loosing 4000 nd i expect a compensation",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":22
+  },
+  {
+    "example_id":130,
+    "customer_message":"[USER_ID]  Guys Check rates properly before buying. Cheating full on xD #Nokia6  on @1107 website cost's Rs.14,999 How Amazon  Saying Nokia 6 costs M.R.P.:   17,199.00\nPrice:   14,999.00  FREE Delivery.Details\nYou Save:   2,200.00 (13%) #AmazonObhijaan #AmazonGiveaway #Amazon [URL]",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":131,
+    "customer_message":"@AmazonHelp Gracias por la pronta respuesta. Tendran App para Xbox One??\n[USER_ID] Cuando lanzaran alguna App para Roku TV en México????",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":132,
+    "customer_message":"[USER_ID] amazon.in site and app, both are down????",
+    "intent":"technical_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the inconvenience. Please try clearing your browser cache or restarting the app. If the issue persists, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":133,
+    "customer_message":"@AmazonHelp The shipping option I selected at checkout was for the two day prime shipping I pay $$ for every year.\n@AmazonHelp No, but that was only updated today after I called and demanded to know why the product I ordered a week ago had not arrived.\n@AmazonHelp please explain to me how the two day prime shipping I pay for results in not receiving my order for nine days #amazon",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":134,
+    "customer_message":"@AmazonHelp while, they have bad reviews and not selling the products in proper ways. check their bad review chart attached herein this tweet. [USER_ID] [URL]\n@AmazonHelp [USER_ID] I am still waiting for the reply of @amazonHELP\n@AmazonHelp Thanks for your reply. I already contacted them but they were disputing with me and not providing me proper resolution. Secondary, i never mind if it happens once. But it happens twice with me. Why are you selling the products of go4shopping.\n[USER_ID], now amazon started stealing the money from India. I placed the order for 2 product but received one. Check video below and be aware before placing the order. its been twice with me. [USER_ID] #amazon #Flipkart [URL]",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":7
+  },
+  {
+    "example_id":135,
+    "customer_message":"@AmazonHelp I have DM the details\n[USER_ID] @AmazonHelp I paid RS 100\/- and RS 999\/- for prime. To make sure my package reaches in the shortest period. What I see you have rescheduled my delivery on your own without my confirmation. Kindly deliver my package asap\n@AmazonHelp I would be happy if you take some pain and identify what has happened. I have shared the tracking details in DM\n@AmazonHelp Kindly check my details and let me know\nAfter paying I shouldn't drop mails to 10 places and follow up.\n@AmazonHelp Sent\n@AmazonHelp I have shared the details, I m really upset that I rcd a new message that your delivery is delayed by 4 days. [USER_ID] pls interfere\n@AmazonHelp You can keep saying that\nWhat will I do I can't understand",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":14
+  },
+  {
+    "example_id":136,
+    "customer_message":"@AmazonHelp No, I have tried tweeting @upshelp. My packages keep going on the truck for delivery and then back again. It’s happened to at least 4 or 5 shipments this week. Needed 3 of them before Monday for a donation, now I’ll have to get elsewhere.\n@AmazonHelp Will do, thank you.\n[USER_ID] my packages are now back at Oakland again. This is ridiculous. Was supposed to receive some by this past Wednesday and now estimated delivery is next Tuesday, way too late.\n@UPSHelp It’s 9 pm and still no sign of 4 packages that have been out for delivery all day.\n@upshelp what’s happening when my packages are “out for delivery” but never make it? I’ve had multiple packages this week where this has happened, including one that has been “out for delivery” 3 days in a row. Never had this many issues before.",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":7
+  },
+  {
+    "example_id":137,
+    "customer_message":"@AmazonHelp The delivery date given in the order confirmation email from amazon, as well as the shipping confirmation email, was today by 8pm.\n@AmazonHelp My order page still says it’ll be delivered today! [URL]\n@AmazonHelp Only when you go to [URL] with the tracking number do you see that the package will now be delivered tomorrow.\nSo many reasons to be reconsider being an [USER_ID] Prime member lately, but man the way they fake free two-day shipping more and more 😑😑",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":138,
+    "customer_message":"@AmazonHelp One was delivered through Amazon's delivery service and the other by UPS.\n@AmazonHelp Yes, they missed the given delivery date from the checkout screen. No emails were sent about it being late either.\n[USER_ID] @AmazonHelp A little disappointed the last 2 out of 3 orders I've placed with Amazon Prime have shown up 2 days late.",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":139,
+    "customer_message":"[USER_ID] [USER_ID] tell me this, why are you shadowing the issue by calling it a damaged product was delivered? The product was not delivered at all as the delivery person decided he won't come to the location and asked me to visit the bus stand to collect the product. 1\/n [URL]\n[USER_ID] your image is being shattered by your delivery men twice in 7days, first with order number [PHONE]-4018711, a two-day delivery product which was delayed by the delivery guy by 2 days and now today 1\/n",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":140,
+    "customer_message":"@AmazonHelp this order was delayed - Order #   [PHONE]-9110651\n@AmazonHelp - Amazon prime srvce has degraded so much in recent past, every second order is getting delayed, why are we paying money! [URL]",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":141,
+    "customer_message":"@AmazonHelp Already done that 4 times. Still can't get a proper answer to my query and every time , I've reported there i got reply as to wait till the end of the day. It's a prime delivery and i should receive it in a day. It's already 3 days late now.\n[USER_ID] The worst service I've ever faced by an E commerce website. Please i recommend don't trust these people. \nBeing a prime member i should get my oder in a day but it already has been 2 day &amp; still yesterday delivery was cancelled &amp; postponed to monday.No point being prime",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":142,
+    "customer_message":"@AmazonHelp I've already taken care of it with a refund, but it is not acceptable at all. I recommend you improve the quality of your shipping because late deliveries and damaged packages are too frequent for the price of Prime.\nPreordered #SonicForces for my little sister long ago from [USER_ID] and it came with the seal subtly opened and the game quite clearly stolen. What the hell is that about? #AmazonLogistics [URL]",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":143,
+    "customer_message":"[USER_ID] still waiting for my #bookofmythicality by [USER_ID] [USER_ID] [USER_ID]  😆",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":144,
+    "customer_message":"Hey @AmazonHelp what's the point of pre-ordering if it's going to be a week late?",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":145,
+    "customer_message":"@AmazonHelp Alright thank you 😁\nHey @AmazonHelp i've ordered Mario Odyssey in April but it still says delivery date pending should cancel and order again ? I'm confused the game comes out in 3 days lmao",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":146,
+    "customer_message":"@AmazonHelp This is not related to change in time... This is immediately after clicking.\nWhat is this [USER_ID] day light cheating \nRegular price without deal is 2970 and when you press show me the deal shows 2978 (8ruppes more) and regular price goes up to 3028. Might be nominal but this is cheating in the name of \"lightning deal\" [URL]",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":147,
+    "customer_message":"@AmazonHelp Until you control shipping, doubt there’s anything you can do other than just not promise dates until after the holidays. Of course shipping the in stock product when I ordered it and not three days later (on the original delivery date) probably could have helped.\nGuess we’re to that point of the season where [USER_ID] guaranteed delivery dates don’t mean jack.",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":148,
+    "customer_message":"@AmazonHelp Done, do check, now starts another templated response ritual I suppose?",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":149,
+    "customer_message":"@AmazonHelp Filled it. Please fix this asap\n@AmazonHelp That’s the customer care link itself which hasn’t helped at all. I was told that it would be delivered within two hours and it’s been more than 18 now.\n[USER_ID] you have messed up my delivery. Waiting for my order scheduled to be delivered yesterday and customer care is only making false promises. Where is my order?",
+    "intent":"late_delivery",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We're sorry for the delay. Please check your order status for the latest updates. If the package is still delayed, our support team can help investigate further.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":150,
+    "customer_message":"[USER_ID] missing puzzle is what i get in my package! #shameonyou #CustomerExperience #order [URL]",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":151,
+    "customer_message":"[USER_ID] All my faith in Amazon being no. 1 is lost 😞. Guess it's time to shift to [USER_ID]\n[USER_ID] After all its mere lip service that Amazon speaks of, extremely disappointed &amp; disheartened by the rude way I was treated in. #diw",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":152,
+    "customer_message":"[USER_ID] The driver hired by Amazon flex lied about delivering the package because he had lost it in his truck.  That's ridiculous.\n[USER_ID] Your delivery system has practically no oversight and you should be ashamed for having such a piss poor system with the Amazon brand on it.\nKennedy at [USER_ID] logistics customer service was absolutely amazing and refreshing after the shit I've dealt with this week.",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":153,
+    "customer_message":"[USER_ID] pathetic service. Ordered AC on 7th october and not delivered till date. Location of order shows gwalior,my current location [URL]",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":154,
+    "customer_message":"I'm so sad [USER_ID] lost my package ☹️☹️☹️",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":155,
+    "customer_message":"[USER_ID] have failed thrice this festive to deliver that too without any valid reason which is really painful. Have lost faith on you now.",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":156,
+    "customer_message":"@AmazonHelp Done already!\n@AmazonHelp they were not able to assist. Approaching Consumer Court! Sad service for a Prime member!!\n[USER_ID] [USER_ID] One of the order is not delivered completely and apparently it isn’t eligible for a return! Please advise.",
+    "intent":"missing_package",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We understand your concern. Please verify the delivery address on your order. If the package shows as delivered but you haven't received it, please contact our support team for assistance.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":157,
+    "customer_message":"@AmazonHelp Thanks.  Already started a refund but when I needed it this weekend and now I wont have it.  That is very frustrating.\n[USER_ID] @AmazonHelp Amazon is not supposed to take returns of our item.  Did they replace it for you?\n[USER_ID] @AmazonHelp No but they refunded my order.\n[USER_ID] disappointed in [USER_ID] bought the regrip and this is how I received it. As you can see this is useless.  #sadface #nogrip [URL]",
+    "intent":"refund_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand your concern about the refund. Please allow the standard processing time. If you haven't received it, please contact our support team for verification.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":158,
+    "customer_message":"@AmazonHelp Oh I have. Only refund option is there. Now I get to wait 6 days for the book to get back, then another 2-3 days for a refund. Quality \/s.\nThank you @AmazonHelp everyone knows: brand new = bent bitch [URL]",
+    "intent":"refund_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand your concern about the refund. Please allow the standard processing time. If you haven't received it, please contact our support team for verification.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":159,
+    "customer_message":"@AmazonHelp They offered to pay me cash to keep the product said no and then sent me something to return it but I pay postage? Horrible service just want my money back on it.\nDear [USER_ID] working on a return on a purchase with Kousj has been a nightmare. Now site won't let me file an AtoZ guarantee. Wants me to pay $20 shipping I think not.. bad company and service",
+    "intent":"refund_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand your concern about the refund. Please allow the standard processing time. If you haven't received it, please contact our support team for verification.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":160,
+    "customer_message":"@AmazonHelp No but it’s a kindle order, I accidentally bought a £30 book with with one click for a kindle I don’t own.\n@AmazonHelp can you check i've actually refunded an item because i haven't got a confirmation email?",
+    "intent":"refund_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand your concern about the refund. Please allow the standard processing time. If you haven't received it, please contact our support team for verification.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":161,
+    "customer_message":"[USER_ID] \nOrder No. [PHONE]-2914730\nPlease refund for the product as I have requested for reverse pickup.\nNo help from ur side\n@AmazonHelp No team has been contacting me I have been calling approx one month\n@AmazonHelp I request [USER_ID] to refund immediately\n[USER_ID] Please resend the link",
+    "intent":"refund_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand your concern about the refund. Please allow the standard processing time. If you haven't received it, please contact our support team for verification.",
+    "difficulty":"medium",
+    "turn_count":9
+  },
+  {
+    "example_id":162,
+    "customer_message":"[USER_ID] [USER_ID] I have wasted 40 minutes trying to make an account give me back my 40 minuets\n[USER_ID] [USER_ID] why do I have to pretty much hack the White House in order for you to work?🤔",
+    "intent":"account_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand the urgency. Please contact our support team directly so they can verify your identity and help restore access to your account.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":163,
+    "customer_message":"@AmazonHelp Thanks!\nIndia Amazon Prime subscription kudurtada without Indian bank account or card???",
+    "intent":"account_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand the urgency. Please contact our support team directly so they can verify your identity and help restore access to your account.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":164,
+    "customer_message":"@AmazonHelp Had a $100.00 put on my account and now it's not there and no record of it\n[USER_ID] just ripped me off for a $100.00, and I am a prime member\n@AmazonHelp No, i only have 1 account, it was a gift card my husband got me\n@AmazonHelp I talked to someone earlier today and was told there was nothing that can be done since I have no numbers from the card, since I scanned it\n[USER_ID] No, it showed I had it, but when I got ready to use it it was no there",
+    "intent":"account_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand the urgency. Please contact our support team directly so they can verify your identity and help restore access to your account.",
+    "difficulty":"medium",
+    "turn_count":9
+  },
+  {
+    "example_id":165,
+    "customer_message":"@AmazonHelp Yeah it happens on the Atom website. A pop up comes up to enter my Amazon prime login and once I submit it it ask me to allow Atom to acess my account. I hit allow and it seems like it attempts to verify my account but it then goes back to original screen where I started.\nHey @AmazonHelp I'm a Prime member and when trying to sign up for the early Jumanji screening I run into an endless loop of Atom attempting to verify my prime account. Any suggestions?\n@AmazonHelp 1st on Atom site I hit log in with Amazon. 2nd Amazon pop up asking me to sign in. 3rd after try to login with Amazon I get this join prime message on Atom. 4. I am a Prime member so I put my Amazon login again and I get asked to allow Atom access. I select Allow &amp; goes back to 3 [URL]\n@AmazonHelp As requested I submitted a service request via email yesterday and I've yet to receive a response. It's been longer than the quoted 12 hours. I'm still unable to use my Amazon Prime login to purchase tickets to the early screening of Jumanji. Help would be appreciated.\n@AmazonHelp I've tried Chrome, Firefox, and on my PC and Android phone.",
+    "intent":"account_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand the urgency. Please contact our support team directly so they can verify your identity and help restore access to your account.",
+    "difficulty":"medium",
+    "turn_count":8
+  },
+  {
+    "example_id":166,
+    "customer_message":"@AmazonHelp 'Dispatching now' it says. Spoken to 2 reps. 1 said tomorrow, another said don't worry it's today!\n[USER_ID] @AmazonHelp You've took £450 out of my bank account yesterday and still not dispatched my Project Scorpio!Thanks for robbing me.",
+    "intent":"account_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand the urgency. Please contact our support team directly so they can verify your identity and help restore access to your account.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":167,
+    "customer_message":"[USER_ID] [USER_ID] @1469 Any exchange offer for Lenovo K8 Note on ur Diwali sale? Pl give spl offer for my K8 Note.\n[USER_ID] [USER_ID] @1469 K8 Note is not there in drop down list. Give a chance to reverse a wrong phone purchased. Worst ever from Lenovo.\n[USER_ID] [USER_ID] @1469 Buy back &amp; delivery option are correct. Only mobile model not showing on list. Pl add K8 Note on the list",
+    "intent":"promotion",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Promotional offers have specific terms and conditions. Please check the promotion details page for validity and applicable terms.",
+    "difficulty":"medium",
+    "turn_count":10
+  },
+  {
+    "example_id":168,
+    "customer_message":"@AmazonHelp Yes both on same account. [URL]\n@AmazonHelp Yep will do. Just doing the school run and will do on my return.\n@AmazonHelp Just sent them an email so hopefully someone can help. Any ideas on what I can do on my last tweet about the incorrectly charged TP WiFi plug offer that over charged me.\n@AmazonHelp The only discount applied was £5. [URL]\n@AmazonHelp Ok. Thanks. I will make contact tomorrow on my day off.\n@AmazonHelp Yes I purchased it all in the bundle.\n[USER_ID] I can’t connect my Amazon Fire Tv box to my echo plus. Alexa app does not give me music books and video menu option just music and books. [URL]",
+    "intent":"promotion",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Promotional offers have specific terms and conditions. Please check the promotion details page for validity and applicable terms.",
+    "difficulty":"medium",
+    "turn_count":13
+  },
+  {
+    "example_id":169,
+    "customer_message":"Not using [USER_ID] lockers again any time soon. Unable to send access code, due to 'unforeseen circumstances' not good enough. @AmazonHelp",
+    "intent":"promotion",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Promotional offers have specific terms and conditions. Please check the promotion details page for validity and applicable terms.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":170,
+    "customer_message":"@AmazonHelp Nope! Just the initial email telling me I had credit\n@AmazonHelp hello, I purchased a kindle ebook for my kindle because I had £2 credit but the promotion wasn't applied to my account and I wasn't given a code or anything. Why wasn't the promotion applied?",
+    "intent":"promotion",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"Promotional offers have specific terms and conditions. Please check the promotion details page for validity and applicable terms.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":171,
+    "customer_message":"I had ordered from [USER_ID] in cashback offer from SBI.when I will get my cashback.#order#[PHONE]-8428356",
+    "intent":"promotion",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Promotional offers have specific terms and conditions. Please check the promotion details page for validity and applicable terms.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":172,
+    "customer_message":"@AmazonHelp I have booked my order in Amazon India. Please look into the issue.\n@AmazonHelp I have received commitment from your team the I will receive a product on time after confirming the same from seller. Now seller has cancelled my order at last moment. Very Bad Experience. Order #   [PHONE]-1015509. Kindly resolve the issue asap",
+    "intent":"order_cancellation",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We can help with that. Please check your order status to see if cancellation is still possible. If you need further assistance, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":173,
+    "customer_message":"@AmazonHelp Jamás me llamaron solo tomaron esa decisión. Insisto que me hacen sentir como un ratero estafador solo porque el banco falla\n@AmazonHelp Ya llame y ni los que contestan saben porque cancelan y tratan de esa forma a la gente\n[USER_ID] @AmazonHelp A mi me hicieron lo mismo. Desde el martes me dijeron que 24-48hrs para respuesta. Ya te resolvieron?\n[USER_ID] El problema es del banco, pero a mi ya me trataron como un ratero estafador, ya cancelaron mi cuenta ninguna otra página es como ustedes. Que triste que traten así a una persona que se dedica a trabajar, y a los que realmente estafan seguro no los ubican.\n¡Aprovechen nuestras promociones bancarias! [URL] [URL]\n[USER_ID] Hasta que dia se encontrará esta promocion ?\n@AmazonHelp Ayer, pero hablé para cambiar la fecha a hoy (desde el martes). El problema es que entregan a deshoras y como es Transportista: AMZMX pues ni con quién dirigirse. Mal mal! Pensando seriamente cancelar el Prime\n[USER_ID] ¡PÉSIMO servicio de entrega!. Desde que contratan a empresas pequeñas (cosa que se aplaude) las entregas son a deshoras, no coordinadas. Tendría que estar las 24 hrs esperando sin salir para recibir un paquete (que aún NO recibo).\n@AmazonHelp No, en ningún lado indica que se realizó con meses sin intereses.\nÚnicamente me hicieron el descuento del 10%\n@AmazonHelp ¿Y cómo aplica lo de \"métodos de pago que requieren validaciones adicionales\"?\n¿Cómo funciona? Porque me cobraron $1 y aun no se realiza el cobro total. [URL]\n@AmazonHelp Ok, entiendo lo del $1.\n¿Pero cómo verifico o me aseguro de que el cobro es a meses sin intereses?, porque según yo, cumplo los requisitos del primer enlace que mandaron.\nGracias.\n[USER_ID] Realicé una compra, pero no sé si el cargo fue a meses o de contado.\n@AmazonHelp Así es :(\n[USER_ID] ¿Por que no puedo? 😩 [URL]\n[USER_ID] Hola. No me aplicó el código del buenfin2017 que hago??\n@AmazonHelp Que llega mañana,  y así llevan desde el sábado\n@AmazonHelp Pues si así llevo desde el sábado\n@AmazonHelp Amazon y la paqueteria tmb de Amazon\n@AmazonHelp Sábado 18 de nov\n[USER_ID] Amazooooon estoy molestisimo, soy prime y desde al sábado estoy esperando mi laptop cmo en arresto domiciliario y no llega mi paqueeeeteeeee ya hable 4 veces a atención y no ayudan , no lleegaaaa no compren prime es la peor estafa , para anualidad por un servicio tan patético\n@AmazonHelp Si ya pase los datos desde ayer pero no me respondieron, el articulo ya se agotó, ya echaron a perder el buen fin, no soy defraudador pero ustedes me hacen sentir así\n[USER_ID] Problemas con Mi banco y me suspendieron mi cuenta sin siquiera darme la oportunidad de pagar con otra tarjeta, como si fuese un ladrón o estafador eso no pasa con otras páginas estoy muy decepcionado, me tratan como ratero adiós buen fin",
+    "intent":"order_cancellation",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We can help with that. Please check your order status to see if cancellation is still possible. If you need further assistance, please contact our support team.",
+    "difficulty":"medium",
+    "turn_count":40
+  },
+  {
+    "example_id":174,
+    "customer_message":"[USER_ID] if I extend my free trial can I cancel it if I choose to before paying? [URL]",
+    "intent":"order_cancellation",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We can help with that. Please check your order status to see if cancellation is still possible. If you need further assistance, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":175,
+    "customer_message":"@AmazonHelp The customer isn’t always right — in this case I am — but the customer is always the customer. Until they’re not. I am not satisfied w\/resp\nThanks a lot [USER_ID] for screwing up the last 3 Prime Orders. 1st had to cancel a dinner party Sat &amp; have no mask for Masquerade gala 2nite.",
+    "intent":"order_cancellation",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We can help with that. Please check your order status to see if cancellation is still possible. If you need further assistance, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":176,
+    "customer_message":"[USER_ID] the world's most confused shopping site. The product has neither canceled nor delivered for the last 4 days.\nCan you please solve?",
+    "intent":"order_cancellation",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We can help with that. Please check your order status to see if cancellation is still possible. If you need further assistance, please contact our support team.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":177,
+    "customer_message":"@AmazonHelp No. [URL] shipped to India.\n@AmazonHelp Does Amazon pay for shipping on international returns? Its illogical if I pay shipping for a product costing $32. I'm in India.",
+    "intent":"return_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"You can initiate a return through your Amazon account. Please check the return policy for your item. If you need help, our support team is available.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":178,
+    "customer_message":"[USER_ID] [USER_ID] Great reply now you are telling \nBefore purchase itself you should tell \nTHEN WHY ARE YOU EASY RETURN \nSHOWING IN ADD \nYOU ARE CHEATING YOUR CUSTOMERS\n[USER_ID] [USER_ID] DON'T BUY ANY PRODUCT IN AMAZON.AMAZON CHEATING.I brought LG Q6 but now telling you can't return you can do replacement or exchange.AMAZON CHEATING COMPANY",
+    "intent":"return_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"You can initiate a return through your Amazon account. Please check the return policy for your item. If you need help, our support team is available.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":179,
+    "customer_message":"@AmazonHelp Nothing to do with getting it gift wrapped. Just for it to be delivered in the condition it left your warehouse and not have stickers that won’t peel off without ripping the surface would be nice. It hardly arrived in the ‘Prime’ condition I usually expect of you.\nSo that’s the 2nd item in 2 days that has been sent out without packing. This time a printer with a hole in the box and corners crushed. What if it had been for a present?? Piss poor [USER_ID] . Yet I get warnings about packaging stuff up properly if I need to return it 🙄.",
+    "intent":"return_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"You can initiate a return through your Amazon account. Please check the return policy for your item. If you need help, our support team is available.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":180,
+    "customer_message":"@AmazonHelp Arriving Tuesday.mean to say your routing process is not good .when FedEx can deliver you the returned product in few days why can't you?\n[USER_ID] ats is the most slowest courier ,my return which is through fedex is delivered to you but my replacement order yet to reach...",
+    "intent":"return_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"You can initiate a return through your Amazon account. Please check the return policy for your item. If you need help, our support team is available.",
+    "difficulty":"medium",
+    "turn_count":6
+  },
+  {
+    "example_id":181,
+    "customer_message":"@AmazonHelp The package was left at the house next door that is unoccupied. The driver gave it to a contractor working at the house. Had the seller not returned today who knows when i would have received it. That is unacceptable in my opinion and as a Prime member even more so.\nSo i ordered a few things on #Amazon on friday i get the alert at 1pm that it was delivered. No delivery came to... [URL]",
+    "intent":"return_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"You can initiate a return through your Amazon account. Please check the return policy for your item. If you need help, our support team is available.",
+    "difficulty":"medium",
+    "turn_count":4
+  },
+  {
+    "example_id":182,
+    "customer_message":"@AmazonHelp Thank you!! I’ll sign up for that good ol monthly option 🙌🏽\nYo [USER_ID] do y’all have a payment plan option for my Prime membership? It’s about time to renew 😓",
+    "intent":"payment_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand this is concerning. Please contact our support team directly so we can verify and resolve the payment issue.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":183,
+    "customer_message":"@AmazonHelp Normally a £1 transaction is placed on the card to ensure its valid but for the last transactions the full amount has been authorised first,which means double the amount I'm spending is being held. And the bank said its 7 working days for the authorised transaction to come back.\n@AmazonHelp [USER_ID] is there any reason you've suddenly started to preauth all transactions and then process the charge in a separate transaction?? This is causing havoc on my prepaid card because you're holding funds instead of just doing one else transaction.",
+    "intent":"payment_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand this is concerning. Please contact our support team directly so we can verify and resolve the payment issue.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":184,
+    "customer_message":"amazon really double charged me and now i gotta get on the phone and use my i was told by applecare voice smh",
+    "intent":"payment_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand this is concerning. Please contact our support team directly so we can verify and resolve the payment issue.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":185,
+    "customer_message":"My free trail finished for amazon prime&amp;they just charged me. Like you could have warned me it was gunna be over so i can unsubscribe🤷🏻‍♀️",
+    "intent":"payment_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand this is concerning. Please contact our support team directly so we can verify and resolve the payment issue.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":186,
+    "customer_message":"[USER_ID] I have placed an order, I have entered my card details bt the payment has not been deducted. I'm not sure abt the process followed in US bt in India the payment is made in advance. Actually, the order is a gift and I don't want it to be paid by the recipient. Please help",
+    "intent":"payment_issue",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We understand this is concerning. Please contact our support team directly so we can verify and resolve the payment issue.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":187,
+    "customer_message":"@AmazonHelp yes thankyou.. tomorrow it is then!\n@AmazonHelp any idea when the \"playseat challenge\" is in stock. keeps saying 1-2 days. thanks.",
+    "intent":"product_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":188,
+    "customer_message":"[USER_ID] why is my Prime becoming less and less Prime? 😒 \n\nDelivery not available until Tuesday for these books and my previous order. 😒 [URL]",
+    "intent":"product_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":189,
+    "customer_message":"@AmazonHelp Thank you\n@AmazonHelp I'm looking at an item and it says \"Ships when available in 1-2 days.\" Does that mean there's an estimated date for it to be  available? I have Prime. This is the item\n[URL]",
+    "intent":"product_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":190,
+    "customer_message":"@AmazonHelp Ty for your response, it says it dispatched and that it was expected for yesterday, no worries though I'm not in too much of a hurry for it\n@AmazonHelp No, just says dispatched with the same expected date of arrival. [URL]\n@AmazonHelp Third-party seller, I think it's from a different country also.\n@AmazonHelp There's no tracking available for this seller.\n@AmazonHelp If it doesn't come by Wednesday, I think I will, thanks for all your help 👍🏻\n@AmazonHelp It came today, thanks for all your help 👍🏻\nOk, the first sign of the apocalypse.. My [USER_ID] package didn't arrive when it said it would 😮 [URL]",
+    "intent":"product_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"medium",
+    "turn_count":14
+  },
+  {
+    "example_id":191,
+    "customer_message":"@AmazonHelp El listado no cambia en México? Gracias de antemano\n[USER_ID] Hola Tío [USER_ID] Dónde puedo ver un listado completo de sus películas y series?\nAn immortal samurai helps a young girl on her quest for vengeance in #BladeOfTheImmortal, available to rent: [URL] [URL]",
+    "intent":"product_inquiry",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Thank you for reaching out. Please let us know how we can help you today.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":192,
+    "customer_message":"[USER_ID] has the worst delivery service when compared to [USER_ID] or @4030",
+    "intent":"complaint",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We're sorry to hear about your experience. Please contact our support team directly so we can investigate and address your concerns.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":193,
+    "customer_message":"[USER_ID] your services is very pathetic I will suggest to everyone just quit this marketplace",
+    "intent":"complaint",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We're sorry to hear about your experience. Please contact our support team directly so we can investigate and address your concerns.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":194,
+    "customer_message":"[USER_ID] you can not begin to understand how frustrated I am getting with your incapable call centre!!!!",
+    "intent":"complaint",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We're sorry to hear about your experience. Please contact our support team directly so we can investigate and address your concerns.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":195,
+    "customer_message":"[USER_ID] It's a pathetic service by Amazon team .. ... My I.D. __email__",
+    "intent":"complaint",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We're sorry to hear about your experience. Please contact our support team directly so we can investigate and address your concerns.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":196,
+    "customer_message":"Is it me or is [USER_ID] #logistics the worst delivery carrier ever?",
+    "intent":"complaint",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"escalate",
+    "reference_response":"We're sorry to hear about your experience. Please contact our support team directly so we can investigate and address your concerns.",
+    "difficulty":"medium",
+    "turn_count":2
+  },
+  {
+    "example_id":197,
+    "customer_message":"@AmazonHelp I already spoke to your customer care team and they are clueless and least bothered. I made a terrible mistake by ordering on [USER_ID]\nOrdered Water dispenser on [USER_ID] on 12-Oct and still haven't received yet. But received email saying delivery attempted #badservice",
+    "intent":"wrong_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We apologize for the mix-up. Please contact our support team so we can arrange a replacement or return for the incorrect item.",
+    "difficulty":"medium",
+    "turn_count":5
+  },
+  {
+    "example_id":198,
+    "customer_message":"@AmazonHelp Messgd the order details. Pls  see how only words, no real solutions offered by #Amazon customer care. Empty apologies. No resolution.\n'Amazoned' to see [USER_ID] screwing up my order and not doing a thing to rectify their mistake #Amazon #AmazonIndia",
+    "intent":"wrong_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We apologize for the mix-up. Please contact our support team so we can arrange a replacement or return for the incorrect item.",
+    "difficulty":"easy",
+    "turn_count":4
+  },
+  {
+    "example_id":199,
+    "customer_message":"[USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] Thanks fam, I just feel awful.i feel like I mislead everyone 😭wahh, I hope it all works out😢\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] +system messed up or the workers you spoke with. We have your receipts, so it should be worked out quickly, don’t worry 💪🏻\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] Apparently it worked just fine last year with Wings, they must’ve made a mistake this time. It’s definitely not your fault! Either the+\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] Wah,I'm sorry guys😭I asked [USER_ID] four times and my mutuals asked too and they adamantly confirmed that we'd get the complete set..😔\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] [USER_ID] You should fix this [USER_ID]\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] +in the western music biz (I think O.o) so [USER_ID] probably didn’t have a system in place.\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] +them the ss from the quote as well, to make sure that this doesn’t happen again. It’s not very common to have multiple ver of one album+\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] Looks like there are quite a few armys with the same problem. You should all contact them &amp; make sure you get what you paid for, show+\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] Someone at amazon was obviously not well informed and just gave us info without double checking. 🙄\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] This is what several armys confirmed with amazon. Looks like they messed up again [URL]\n[USER_ID] [USER_ID] [USER_ID] [USER_ID] Explain this:\n[URL]\n[USER_ID] [USER_ID] [USER_ID] You‘ll always get a random ver no matter how many you order, unless you order 4. Then you’ll get the set, army confirmed this with amazon\n[USER_ID] [USER_ID] I got mine today. But all three I ordered were the same version 🙄\nHas anyone else who ordered through Amazon gotten their album? [USER_ID]",
+    "intent":"wrong_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We apologize for the mix-up. Please contact our support team so we can arrange a replacement or return for the incorrect item.",
+    "difficulty":"medium",
+    "turn_count":15
+  },
+  {
+    "example_id":200,
+    "customer_message":"@AmazonHelp This is the third time I am actually reaching out to Amazon care, and trust me I have reasons to be wary. Please don't let me down this time\n@AmazonHelp I hence need you to look into this as soon as possible. You cannot afford to lose customers over fraud vendors.\n@AmazonHelp I have already emailed you. The 'product' is 'not returnable'. And hence amounts to absolute cheating on part of your vendor.\nHello [USER_ID], Thank for delivering wrong products to me, stuff that I cannot use. Now please send what I ordered for. Have emailed.",
+    "intent":"wrong_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We apologize for the mix-up. Please contact our support team so we can arrange a replacement or return for the incorrect item.",
+    "difficulty":"medium",
+    "turn_count":8
+  },
+  {
+    "example_id":201,
+    "customer_message":"In #response to this #tweet, I received a mail full with big promises and self praise. #Thank you [USER_ID] for ur #reply full with #shit. [URL]\n@AmazonHelp Go to #hell with your #suggestions. I want #resolution only. Whatever you suggest in set of your mails; We already competed those processes.\n[USER_ID]  [URL]\n[USER_ID]  [URL]\n@AmazonHelp If [USER_ID] [USER_ID] think that Indian Customer can be exploited then you r making mistake. I’ll take matter @ highest level on social media\n@AmazonHelp I’ll wait till the time you reply the resolution of matter at this place. I’ll not allow you to exploit me with your dirty tactics [USER_ID]",
+    "intent":"wrong_item",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"We apologize for the mix-up. Please contact our support team so we can arrange a replacement or return for the incorrect item.",
+    "difficulty":"medium",
+    "turn_count":12
+  },
+  {
+    "example_id":202,
+    "customer_message":"#AmazonIndia  your gift card __credit_card__ is not valid. Feeling cheated. #amazongiftcard",
+    "intent":"gift_card",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Please check your gift card balance in your Amazon account. If you're having issues redeeming it, our support team can assist.",
+    "difficulty":"easy",
+    "turn_count":3
+  },
+  {
+    "example_id":203,
+    "customer_message":"[USER_ID] Is Amazon pay balance transferable to another Amazon user?",
+    "intent":"gift_card",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Please check your gift card balance in your Amazon account. If you're having issues redeeming it, our support team can assist.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":204,
+    "customer_message":"Could not get Amazon balance which I made in offer days. Then what is your motto behind the 75 rs cash back on 250rs and above.[USER_ID]",
+    "intent":"gift_card",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Please check your gift card balance in your Amazon account. If you're having issues redeeming it, our support team can assist.",
+    "difficulty":"easy",
+    "turn_count":2
+  },
+  {
+    "example_id":205,
+    "customer_message":"@AmazonHelp Yes the card was bought on [URL]. The balance is on my uk amazon account but no option to use on Amazon Prime Now checkout 🤔\n@AmazonHelp [USER_ID] Is it possible to spend gift card balances on Prime Now in the UK?\n[USER_ID] Hey [USER_ID], how can I use my Amazon gift card balance on Prime Now in UK? Is there a workaround for this?",
+    "intent":"gift_card",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Please check your gift card balance in your Amazon account. If you're having issues redeeming it, our support team can assist.",
+    "difficulty":"easy",
+    "turn_count":5
+  },
+  {
+    "example_id":206,
+    "customer_message":"@AmazonHelp Thank you for your response, however I just got off the phone with Amazon Support and they were able to resolve my issue.\n@AmazonHelp They had to manually send a password reset email and once I received it I was able to reset it then log in without issue. No idea why my original password stopped working though.\n@AmazonHelp Is there a problem with signing in to Amazon right now? I'm trying to check my gift card balance but it keeps rejecting my  password.",
+    "intent":"gift_card",
+    "intent_notes":"Auto-classified by keyword matching",
+    "expected_action":"auto_handle",
+    "reference_response":"Please check your gift card balance in your Amazon account. If you're having issues redeeming it, our support team can assist.",
+    "difficulty":"easy",
+    "turn_count":5
+  }
+]

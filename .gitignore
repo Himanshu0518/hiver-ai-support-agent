@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+artifacts/llm_cache.json
+artifacts/intent_model/llm_cache.json
+*.egg-info/
+dist/
+build/
+.ruff_cache/
+
+# Duplicates of data/raw/* must never be committed at data/ root
+data/*.csv
+
+# Large source CSVs — rebuildable via data/prep/prepare_data.py
+# (the prebuilt FAISS index + cases_for_index.csv ARE committed so
+#  evaluation runs out of the box without the full dataset)
+data/raw/*.csv
+data/kb/*.csv
+data/processed/filtered_conversations.csv
+data/processed/filtered_conversations_sample.csv
