@@ -133,6 +133,8 @@ AmazonHelp is Amazon's public Twitter support channel. "Good" means:
 | Golden set examples | 206 |
 | Intent categories | 14 |
 
+*Note: The raw Kaggle `twcs.csv` dataset (~2.8M tweets) was preprocessed using [`DataPreprocessing.ipynb`] to filter 169,840 AmazonHelp tweets and reconstruct 82,556 multi-turn conversation threads.*
+
 ### Intent Classification (all 206 golden set examples)
 
 | Model | Accuracy | Macro F1 |
@@ -371,6 +373,7 @@ The headline **93.2% keyword classifier accuracy** is misleading because:
 
 ```
 hiver-ai-support-agent/
+├── DataPreprocessing.ipynb        # Initial Kaggle notebook (tweet thread extraction & reconstruction)
 ├── pyproject.toml                 # Dependencies (uv sync)
 ├── .env.example                   # API key template
 ├── README.md                      # This report
