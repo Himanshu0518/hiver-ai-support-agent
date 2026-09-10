@@ -96,6 +96,8 @@ The pipeline takes **< 1 minute** on the golden set with keyword/template fallba
         └──────────┘
 ```
 
+*Note: The raw Kaggle `twcs.csv` dataset (~2.8M tweets) was preprocessed using [`DataPreprocessing.ipynb`](https://www.kaggle.com/code/himanshu9648/amazonhelp-customer-support-data-preparation) to filter 169,840 AmazonHelp tweets and reconstruct 82,556 multi-turn conversation threads.*
+
 Every component returns **Pydantic models** (`ClassificationResult`, `RoutingResult`, `GenerationResult`, `RerankedCase`) — no raw dicts pass between modules.
 
 **Retrieval Skip:** Simple greetings (`hi`, `hello`, `thanks`, `bye`), short `general_inquiry`, and `complaint` messages (≤8 words, ≥85% confidence) bypass FAISS entirely — cutting latency from ~30s to ~5s for trivial messages.
@@ -143,8 +145,6 @@ AmazonHelp is Amazon's public Twitter support channel. "Good" means:
 | FAISS index vectors | 10,000 (sampled) |
 | Golden set examples | 206 |
 | Intent categories | 14 |
-
-*Note: The raw Kaggle `twcs.csv` dataset (~2.8M tweets) was preprocessed using [`DataPreprocessing.ipynb`] to filter 169,840 AmazonHelp tweets and reconstruct 82,556 multi-turn conversation threads.*
 
 ### Knowledgebase Construction Pipeline
 
