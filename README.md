@@ -135,6 +135,17 @@ AmazonHelp is Amazon's public Twitter support channel. "Good" means:
 
 *Note: The raw Kaggle `twcs.csv` dataset (~2.8M tweets) was preprocessed using [`DataPreprocessing.ipynb`] to filter 169,840 AmazonHelp tweets and reconstruct 82,556 multi-turn conversation threads.*
 
+### Knowledgebase Construction Pipeline
+
+The creation of the historical resolution Knowledgebase (KB) follows a strict pipeline:
+
+1. **Raw Data Extraction (`DataPreprocessing.ipynb`)**: We started with the Kaggle Customer Support on Twitter dataset (~2.8M tweets). We filtered for `AmazonHelp` specifically (169,840 tweets) and algorithmically reconstructed multi-turn conversation threads by following `in_response_to_tweet_id` chains, yielding ~82.5K complete conversations.
+2. **Conversation Parsing (`src/intent/build_kb.py`)**: For each conversation, we:
+   - Extracted the initial **customer problem**.
+   - Parsed all **Amazon responses** to extract the final resolution (e.g., "Directed customer to check order status", "Processed refund", "Offered replacement").
+   - **Quality Assessment**: We automatically graded the quality of Amazon's resolution (`strong`, `medium`, `weak`) based on the concreteness of the action (e.g., refunds score higher than apologies) and the depth of the conversation.
+3. **Index Creation**: The resulting cases are embedded using `sentence-transformers` and loaded into a FAISS index, enriched with intent and quality metadata for the reranking stage.
+
 ### Intent Classification (all 206 golden set examples)
 
 | Model | Accuracy | Macro F1 |

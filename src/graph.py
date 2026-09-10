@@ -144,7 +144,7 @@ def generate_node(state: AgentState) -> dict:
     return {
         "response": result.response,
         "evidence_case_ids": result.evidence_case_ids,
-        "escalate": result.escalate,
+        "escalate": False,  # Router decided auto_handle — authoritative
         "generation_reason": result.reason,
         "used_llm": gen_provider,
     }
@@ -236,6 +236,8 @@ def run_pipeline(customer_message: str) -> dict:
 
 def display_results(results: dict):
     """Pretty-print pipeline results."""
+    import json
+
     log.info("=" * 60)
     log.info("PIPELINE RESULTS  (LangGraph + Gemini/Groq)")
     log.info("=" * 60)
@@ -258,6 +260,25 @@ def display_results(results: dict):
 
     log.info("\nResponse:")
     log.info("  %s", results.get('response', ''))
+
+    # Build structured JSON output
+    json_output = {
+        "customer_message": results.get("customer_message", ""),
+        "intent": results.get("intent", ""),
+        "confidence": round(results.get("confidence", 0), 4),
+        "classification_reasoning": results.get("classification_reasoning", ""),
+        "action": results.get("action", ""),
+        "risk_score": round(results.get("risk_score", 0), 4),
+        "routing_reason": results.get("routing_reason", ""),
+        "escalate": results.get("escalate", False),
+        "response": results.get("response", ""),
+        "evidence_case_ids": results.get("evidence_case_ids", []),
+        "used_llm": results.get("used_llm", ""),
+    }
+    log.info("\n" + "=" * 60)
+    log.info("STRUCTURED JSON RESPONSE")
+    log.info("=" * 60)
+    log.info("\n%s", json.dumps(json_output, indent=2, ensure_ascii=False))
     log.info("")
 
 
