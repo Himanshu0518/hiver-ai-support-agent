@@ -2,7 +2,10 @@
 Conversation Quality Filtering for AmazonHelp conversations.
 Filters out low-quality conversations that shouldn't become RAG cases.
 """
+import logging
 import pandas as pd
+
+log = logging.getLogger(__name__)
 
 
 # Quality rules
@@ -129,25 +132,25 @@ def filter_conversations(conversations):
 
 def main():
     """Run quality filtering."""
-    print("Loading conversations...")
+    log.info("Loading conversations...")
     conv_path = "data/raw/amazonhelp_conversations.csv"
     conversations = pd.read_csv(conv_path, low_memory=False)
-    
-    print(f"Total conversations: {len(conversations):,}")
-    
+
+    log.info("Total conversations: %s", f"{len(conversations):,}")
+
     filtered, stats = filter_conversations(conversations)
-    
-    print(f"\nQuality Filtering Results:")
-    print(f"  Kept: {stats['kept']:,} ({stats['kept']/stats['total']*100:.1f}%)")
-    print(f"  Removed: {stats['removed']:,} ({stats['removed']/stats['total']*100:.1f}%)")
-    print(f"\nRemoval reasons:")
+
+    log.info("\nQuality Filtering Results:")
+    log.info("  Kept: %s (%.1f%%)", f"{stats['kept']:,}", stats['kept']/stats['total']*100)
+    log.info("  Removed: %s (%.1f%%)", f"{stats['removed']:,}", stats['removed']/stats['total']*100)
+    log.info("\nRemoval reasons:")
     for reason, count in sorted(stats['reasons'].items(), key=lambda x: -x[1]):
-        print(f"  {reason}: {count:,}")
-    
+        log.info("  %s: %s", reason, f"{count:,}")
+
     # Save filtered conversations
     output_path = "data/processed/filtered_conversations.csv"
     filtered.to_csv(output_path, index=False)
-    print(f"\nSaved filtered conversations to {output_path}")
+    log.info("\nSaved filtered conversations to %s", output_path)
 
 
 if __name__ == "__main__":

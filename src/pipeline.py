@@ -2,8 +2,11 @@
 Pipeline CLI — thin wrapper around the LangGraph graph.
 Run: python -m src.pipeline "My package is late"
 """
+import logging
 import sys
 from src.graph import run_pipeline, display_results
+
+log = logging.getLogger(__name__)
 
 
 def main():
@@ -12,8 +15,8 @@ def main():
         results = run_pipeline(message)
         display_results(results)
     else:
-        print("Usage: python -m src.pipeline \"<customer message>\"")
-        print("  or run: python -m src.graph   (interactive mode)")
+        log.info("Usage: python -m src.pipeline \"<customer message>\"")
+        log.info("  or run: python -m src.graph   (interactive mode)")
 
 
 if __name__ == "__main__":

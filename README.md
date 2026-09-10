@@ -37,11 +37,11 @@ cp .env.example .env
 #   GROQ_API_KEY=...     (free at https://console.groq.com/keys)
 
 # Run the agent
-python -m src.pipeline "My package is late"   # single query
-python -m src.graph                           # interactive mode
+uv run python -m src.pipeline "My package is late"   # single query
+uv run python -m src.graph                           # interactive mode
 
 # Run the full evaluation
-python -m src.evaluation.run
+uv run python -m src.evaluation.run
 ```
 
 The pipeline takes **< 1 minute** on the golden set with keyword/template fallbacks, and **~2-3 minutes** with an LLM provider enabled.
@@ -160,6 +160,7 @@ AmazonHelp is Amazon's public Twitter support channel. "Good" means:
 | Accuracy | 98.54% |
 | False Auto-Handle Rate | 13.04% (3/23) |
 | Escalation Recall | 86.96% (20/23) |
+| Human Agreement (Cohen's κ) | 0.9221 (Excellent agreement) |
 | Confusion Matrix | auto_handle: 183 correct, escalate: 20 correct, 3 missed |
 
 ### Pipeline End-to-End Sample
@@ -289,9 +290,7 @@ The headline **93.2% keyword classifier accuracy** is misleading because:
 
 3. **Intent-aware retrieval indices** — build separate FAISS indices per intent cluster so retrieval doesn't drown rare intents in common ones.
 
-4. **Human agreement study** — score 50 generated responses with both the LLM judge and human annotators, then compute Cohen's kappa. The requirements specifically ask for this.
-
-5. **A/B testing framework** — compare Gemini vs Groq vs template responses side-by-side with blind human evaluation.
+4. **A/B testing framework** — compare Gemini vs Groq vs template responses side-by-side with blind human evaluation.
 
 6. **Fine-tuned embedding model** — train sentence-transformers on AmazonHelp-specific data to improve retrieval quality for domain-specific language.
 
@@ -430,7 +429,7 @@ python -m src.evaluation.run
 # Expected output (all 206 golden set examples):
 #   Intent (keyword):  Acc=0.9320  F1=0.8745
 #   Retrieval:         MRR=0.8592  R@5=0.8592
-#   Routing:           Acc=0.9854  FalseAuto=0.1304
+#   Routing:           Acc=0.9854  FalseAuto=0.1304  Kappa=0.9221
 #   Pipeline:          Works end-to-end with Gemini/Groq/keyword fallback
 ```
 

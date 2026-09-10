@@ -2,6 +2,7 @@
 Retrieval Module.
 Searches FAISS index for similar historical cases.
 """
+import logging
 import numpy as np
 import os
 import sys
@@ -11,14 +12,16 @@ from sentence_transformers import SentenceTransformer
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
+log = logging.getLogger(__name__)
+
 
 class Retriever:
     """Retrieves similar historical cases using FAISS."""
-    
+
     def __init__(self, index_dir="artifacts/vector_index", model_name='all-MiniLM-L6-v2'):
         """
         Initialize the retriever.
-        
+
         Args:
             index_dir: Directory containing FAISS index and metadata
             model_name: Sentence-transformer model name
@@ -29,31 +32,31 @@ class Retriever:
         self.index = None
         self.metadata = None
         self.cases_df = None
-    
+
     def load(self):
         """Load index, metadata, and model."""
-        print(f"Loading retriever from {self.index_dir}...")
-        
+        log.info("Loading retriever from %s...", self.index_dir)
+
         # Load embedding model
-        print(f"Loading embedding model: {self.model_name}...")
+        log.info("Loading embedding model: %s...", self.model_name)
         self.model = SentenceTransformer(self.model_name)
-        
+
         # Load FAISS index
         index_path = os.path.join(self.index_dir, "faiss_index.bin")
-        print(f"Loading FAISS index from {index_path}...")
+        log.info("Loading FAISS index from %s...", index_path)
         self.index = faiss.read_index(index_path)
-        print(f"Index size: {self.index.ntotal:,} vectors")
-        
+        log.info("Index size: %s vectors", f"{self.index.ntotal:,}")
+
         # Load metadata
         metadata_path = os.path.join(self.index_dir, "index_metadata.json")
         with open(metadata_path, 'r', encoding='utf-8') as f:
             self.metadata = json.load(f)
-        
+
         # Load cases
         cases_path = os.path.join(self.index_dir, "cases_for_index.csv")
         self.cases_df = __import__('pandas').read_csv(cases_path, low_memory=False)
-        
-        print("Retriever loaded successfully.")
+
+        log.info("Retriever loaded successfully.")
     
     def retrieve(self, query, top_k=5, intent_filter=None):
         """
@@ -167,5 +170,5 @@ class Retriever:
                 })
             return results
         except Exception as e:
-            print(f"TF-IDF retrieval error: {e}")
+            log.warning("TF-IDF retrieval error: %s", e)
             return []

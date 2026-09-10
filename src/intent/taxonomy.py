@@ -3,6 +3,7 @@ Intent Taxonomy Builder.
 Explores customer problems to define intent categories from data.
 Run: python -m src.intent.taxonomy
 """
+import logging
 import pandas as pd
 import re
 import os
@@ -11,6 +12,8 @@ import json
 from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 
 # Keyword patterns for initial intent discovery
@@ -52,33 +55,33 @@ def classify_by_keywords(text):
 
 def explore_intents(df, sample_size=2000):
     """Explore intent distribution in the dataset."""
-    print("=" * 60)
-    print("INTENT EXPLORATION")
-    print("=" * 60)
-    
+    log.info("=" * 60)
+    log.info("INTENT EXPLORATION")
+    log.info("=" * 60)
+
     # Sample for exploration
     sample = df.sample(n=min(sample_size, len(df)), random_state=42)
-    
+
     # Classify each customer problem
     intents = sample['customer_problem'].apply(classify_by_keywords)
-    
+
     # Distribution
-    print("\n--- Intent Distribution (keyword-based) ---")
+    log.info("\n--- Intent Distribution (keyword-based) ---")
     intent_counts = intents.value_counts()
     for intent, count in intent_counts.items():
         pct = count / len(intents) * 100
-        print(f"  {intent}: {count} ({pct:.1f}%)")
-    
+        log.info("  %s: %s (%.1f%%)", intent, count, pct)
+
     # Show examples for each intent
-    print("\n--- Examples per Intent ---")
+    log.info("\n--- Examples per Intent ---")
     for intent in intent_counts.index[:12]:  # Top 12 intents
         examples = sample[intents == intent]['customer_problem'].head(3)
-        print(f"\n  [{intent}]")
+        log.info("\n  [%s]", intent)
         for ex in examples:
             try:
-                print(f"    - {str(ex)[:100]}")
+                log.info("    - %s", str(ex)[:100])
             except UnicodeEncodeError:
-                print(f"    - (unicode, {len(str(ex))} chars)")
+                log.info("    - (unicode, %s chars)", len(str(ex)))
     
     return intents, intent_counts
 
@@ -87,9 +90,9 @@ def main():
     """Build intent taxonomy from data."""
     # Load filtered conversations
     path = "data/processed/filtered_conversations_sample.csv"
-    print(f"Loading from {path}...")
+    log.info("Loading from %s...", path)
     df = pd.read_csv(path, low_memory=False)
-    print(f"Loaded {len(df):,} conversations")
+    log.info("Loaded %s conversations", f"{len(df):,}")
     
     # Explore intents
     intents, distribution = explore_intents(df)
@@ -176,26 +179,26 @@ def main():
     output_path = "data/processed/intent_taxonomy.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(taxonomy, f, indent=2, ensure_ascii=False)
-    print(f"\nSaved taxonomy to {output_path}")
-    
+    log.info("\nSaved taxonomy to %s", output_path)
+
     # Assign intents to the full filtered dataset
-    print("\nAssigning intents to all conversations...")
+    log.info("\nAssigning intents to all conversations...")
     all_path = "data/processed/filtered_conversations.csv"
     all_df = pd.read_csv(all_path, low_memory=False)
     all_df['intent'] = all_df['customer_problem'].apply(classify_by_keywords)
-    
+
     # Save with intents
     all_df.to_csv(all_path, index=False)
-    print(f"Updated {all_path} with intent labels")
-    
+    log.info("Updated %s with intent labels", all_path)
+
     # Show distribution on full dataset
-    print("\n--- Full Dataset Intent Distribution ---")
+    log.info("\n--- Full Dataset Intent Distribution ---")
     full_dist = all_df['intent'].value_counts()
     for intent, count in full_dist.items():
         pct = count / len(all_df) * 100
-        print(f"  {intent}: {count:,} ({pct:.1f}%)")
-    
-    print("\nDone!")
+        log.info("  %s: %s (%.1f%%)", intent, f"{count:,}", pct)
+
+    log.info("\nDone!")
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ LangGraph AI Support Agent Pipeline.
 State machine:
   classify → retrieve → rerank → route → generate / escalate
 """
+import logging
 import os
 import sys
 from typing import TypedDict, List, Dict
@@ -11,9 +12,11 @@ from langgraph.graph import StateGraph, END
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from src.intent.classifier import classify_with_llm, classify_with_keywords
+log = logging.getLogger(__name__)
+
+from src.intent.classifier import classify_with_llm_and_provider, classify_with_keywords
 from src.retrieval.reranker import Reranker
-from src.generation.response_generator import generate
+from src.generation.response_generator import generate_and_provider
 from src.routing.router import Router
 from src.models import (
     ClassificationResult,
@@ -22,7 +25,6 @@ from src.models import (
     RerankedCase,
     RoutingAction,
 )
-from src.config import llm_provider_name
 
 
 # ================================================================
@@ -67,12 +69,7 @@ def classify_node(state: AgentState) -> dict:
     """Classify the customer message into an intent."""
     message = state["customer_message"]
 
-    try:
-        result: ClassificationResult = classify_with_llm(message)
-        used_llm = llm_provider_name()
-    except Exception:
-        result = classify_with_keywords(message)
-        used_llm = "keyword"
+    result, used_llm = classify_with_llm_and_provider(message)
 
     return {
         "intent": result.intent.value,
@@ -92,7 +89,7 @@ def retrieve_node(state: AgentState) -> dict:
         retriever.load()
         cases = retriever.retrieve(message, top_k=10)
     except Exception as e:
-        print(f"Retrieval error: {e}")
+        log.warning("Retrieval error: %s", e)
         cases = []
 
     return {"retrieved_cases": cases}
@@ -135,18 +132,21 @@ def generate_node(state: AgentState) -> dict:
             "evidence_case_ids": [],
             "escalate": True,
             "generation_reason": "Escalated to human agent",
+            "used_llm": state.get("used_llm", "keyword"),
         }
 
-    result: GenerationResult = generate(
+    result, gen_provider = generate_and_provider(
         customer_message=state["customer_message"],
         intent=state["intent"],
         cases=state["reranked_cases"],
     )
+
     return {
         "response": result.response,
         "evidence_case_ids": result.evidence_case_ids,
         "escalate": result.escalate,
         "generation_reason": result.reason,
+        "used_llm": gen_provider,
     }
 
 
@@ -236,47 +236,47 @@ def run_pipeline(customer_message: str) -> dict:
 
 def display_results(results: dict):
     """Pretty-print pipeline results."""
-    print("\n" + "=" * 60)
-    print("PIPELINE RESULTS  (LangGraph + Gemini/Groq)")
-    print("=" * 60)
+    log.info("=" * 60)
+    log.info("PIPELINE RESULTS  (LangGraph + Gemini/Groq)")
+    log.info("=" * 60)
 
-    print(f"\nIntent:")
-    print(f"  {results.get('intent', '?')}  (confidence: {results.get('confidence', 0):.2f})")
-    print(f"  Reasoning: {results.get('classification_reasoning', 'N/A')}")
-    print(f"  Provider: {results.get('used_llm', '?')}")
+    log.info("\nIntent:")
+    log.info("  %s  (confidence: %.2f)", results.get('intent', '?'), results.get('confidence', 0))
+    log.info("  Reasoning: %s", results.get('classification_reasoning', 'N/A'))
+    log.info("  Provider: %s", results.get('used_llm', '?'))
 
-    print(f"\nRetrieved cases:")
+    log.info("\nRetrieved cases:")
     for c in results.get("reranked_cases", [])[:5]:
         cid = c.get("case_id", "?") if isinstance(c, dict) else getattr(c, "case_id", "?")
         score = c.get("rerank_score", 0) if isinstance(c, dict) else getattr(c, "rerank_score", 0)
         qual = c.get("resolution_quality", "?") if isinstance(c, dict) else getattr(c, "resolution_quality", "?")
-        print(f"  {cid}  score={score:.3f}  quality={qual}")
+        log.info("  %s  score=%.3f  quality=%s", cid, score, qual)
 
-    print(f"\nDecision:  {results.get('action', '?').upper()}")
-    print(f"  Risk: {results.get('risk_score', 0):.3f}")
-    print(f"  Reason: {results.get('routing_reason', 'N/A')}")
+    log.info("\nDecision:  %s", results.get('action', '?').upper())
+    log.info("  Risk: %.3f", results.get('risk_score', 0))
+    log.info("  Reason: %s", results.get('routing_reason', 'N/A'))
 
-    print(f"\nResponse:")
-    print(f"  {results.get('response', '')}")
-    print()
+    log.info("\nResponse:")
+    log.info("  %s", results.get('response', ''))
+    log.info("")
 
 
 def main():
     """Interactive CLI."""
-    print("=" * 60)
-    print("AMAZONHELP AI SUPPORT AGENT  (Gemini / Groq fallback)")
-    print("=" * 60)
-    print("\nEnter a customer message (or 'quit' to exit):\n")
+    log.info("=" * 60)
+    log.info("AMAZONHELP AI SUPPORT AGENT  (Gemini / Groq fallback)")
+    log.info("=" * 60)
+    log.info("\nEnter a customer message (or 'quit' to exit):\n")
 
     while True:
         try:
             message = input("Customer message: ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\nGoodbye!")
+            log.info("\nGoodbye!")
             break
 
         if not message or message.lower() in ("quit", "exit", "q"):
-            print("Goodbye!")
+            log.info("Goodbye!")
             break
 
         results = run_pipeline(message)

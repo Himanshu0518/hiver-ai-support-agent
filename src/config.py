@@ -2,12 +2,66 @@
 Central configuration.
 Loads env vars and lazily initializes LLM providers (Gemini → Groq fallback).
 """
+import logging
 import os
 import sys
 import warnings
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# ---------------------------------------------------------------------------
+# Module-level logger for the project.
+# Configure once here; all modules use `logging.getLogger(__name__)`.
+# ---------------------------------------------------------------------------
+_logging_configured = False
+
+
+def setup_logging(
+    level: int = logging.INFO,
+    format_str: str | None = None,
+    stream: object = sys.stderr,
+) -> None:
+    """Configure project-wide logging. Idempotent — safe to call multiple times.
+
+    Args:
+        level: Root logger level (default INFO).
+        format_str: Custom format. Defaults to a concise timestamp + level + module + message.
+        stream: Output stream (default sys.stderr).
+    """
+    global _logging_configured
+    if _logging_configured:
+        return
+    _logging_configured = True
+
+    if format_str is None:
+        format_str = "%(asctime)s [%(levelname)-8s] %(name)s: %(message)s"
+
+    handler = logging.StreamHandler(stream)
+    handler.setFormatter(logging.Formatter(format_str, datefmt="%H:%M:%S"))
+
+    root = logging.getLogger()
+    root.setLevel(level)
+    root.addHandler(handler)
+
+    # Suppress verbose third-party library logs by default.
+    # The project's own modules (src.*) remain at the configured level.
+    for _lib in (
+        "httpx",
+        "langchain",
+        "langchain_core",
+        "langchain_groq",
+        "langchain_google_genai",
+        "google_genai",
+        "faiss",
+        "sentence_transformers",
+        "tqdm",
+    ):
+        logging.getLogger(_lib).setLevel(logging.WARNING)
+
+
+# Configure with a default concise format on import.
+setup_logging()
 
 # ---------------------------------------------------------------------------
 # Suppress the Google GenAI SDK stderr message about AFC.

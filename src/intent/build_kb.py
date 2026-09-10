@@ -3,12 +3,15 @@ Build Historical Resolution Knowledge Base.
 Extracts resolution cases from conversations for RAG retrieval.
 Run: python -m src.intent.build_kb
 """
+import logging
 import pandas as pd
 import re
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 
 def extract_amazon_actions(amazon_responses):
@@ -125,30 +128,30 @@ def build_cases(input_path, output_path):
         input_path: Path to filtered conversations CSV
         output_path: Path to output cases CSV
     """
-    print(f"Loading conversations from {input_path}...")
+    log.info("Loading conversations from %s...", input_path)
     df = pd.read_csv(input_path, low_memory=False)
-    print(f"Loaded {len(df):,} conversations")
-    
+    log.info("Loaded %s conversations", f"{len(df):,}")
+
     cases = []
     for idx, row in df.iterrows():
         case_id = f"C{idx:06d}"
-        
+
         # Extract customer problem
         customer_problem = str(row.get('customer_problem', ''))
         if pd.isna(row.get('customer_problem')):
             customer_problem = ''
-        
+
         # Extract Amazon actions
         amazon_responses = str(row.get('amazon_responses', ''))
         resolution = extract_amazon_actions(amazon_responses)
-        
+
         # Assess quality
         quality = assess_resolution_quality(
             str(row.get('conversation', '')),
             amazon_responses,
             row.get('turn_count', 2)
         )
-        
+
         case = {
             'case_id': case_id,
             'conversation_id': row.get('conversation_id', ''),
@@ -161,23 +164,23 @@ def build_cases(input_path, output_path):
             'turn_count': row.get('turn_count', 2),
         }
         cases.append(case)
-    
+
     cases_df = pd.DataFrame(cases)
-    
+
     # Save
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     cases_df.to_csv(output_path, index=False)
-    print(f"Saved {len(cases_df):,} cases to {output_path}")
-    
+    log.info("Saved %s cases to %s", f"{len(cases_df):,}", output_path)
+
     # Statistics
-    print("\n--- Case Statistics ---")
-    print(f"Total cases: {len(cases_df):,}")
-    print(f"\nIntent distribution:")
+    log.info("\n--- Case Statistics ---")
+    log.info("Total cases: %s", f"{len(cases_df):,}")
+    log.info("\nIntent distribution:")
     for intent, count in cases_df['intent'].value_counts().items():
-        print(f"  {intent}: {count:,}")
-    print(f"\nResolution quality:")
+        log.info("  %s: %s", intent, f"{count:,}")
+    log.info("\nResolution quality:")
     for quality, count in cases_df['resolution_quality'].value_counts().items():
-        print(f"  {quality}: {count:,}")
+        log.info("  %s: %s", quality, f"{count:,}")
     
     return cases_df
 
@@ -189,7 +192,7 @@ def main():
     
     build_cases(input_path, output_path)
     
-    print("\nDone!")
+    log.info("\nDone!")
 
 
 if __name__ == "__main__":

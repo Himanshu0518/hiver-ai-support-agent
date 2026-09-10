@@ -6,11 +6,14 @@ Supports three tiers:
   2. Groq  (fallback)  – structured output via Pydantic
   3. Keyword matcher    – no LLM needed
 """
+import logging
 import os
 import sys
 from typing import List, Dict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 from src.config import (
     gemini_available,
@@ -92,7 +95,7 @@ def classify_with_llm(message: str) -> ClassificationResult:
             })
             return result
         except Exception as e:
-            print(f"Gemini classification error: {e} — falling back to Groq")
+            log.warning("Gemini classification error: %s — falling back to Groq", e)
 
     # Try Groq second
     if groq_available():
@@ -104,10 +107,41 @@ def classify_with_llm(message: str) -> ClassificationResult:
             })
             return result
         except Exception as e:
-            print(f"Groq classification error: {e} — falling back to keywords")
+            log.warning("Groq classification error: %s — falling back to keywords", e)
 
     # Keyword fallback
     return classify_with_keywords(message)
+
+
+def classify_with_llm_and_provider(message: str) -> tuple[ClassificationResult, str]:
+    """Classify and return (result, actual_provider_used).
+
+    Provider is one of: 'gemini', 'groq', 'keyword'.
+    """
+    if gemini_available():
+        try:
+            chain = _get_gemini_chain()
+            result: ClassificationResult = chain.invoke({
+                "intent_definitions": INTENT_DEFINITIONS,
+                "message": message,
+            })
+            return result, "gemini"
+        except Exception as e:
+            log.warning("Gemini classification error: %s — falling back to Groq", e)
+
+    if groq_available():
+        try:
+            chain = _get_groq_chain()
+            result: ClassificationResult = chain.invoke({
+                "intent_definitions": INTENT_DEFINITIONS,
+                "message": message,
+            })
+            return result, "groq"
+        except Exception as e:
+            log.warning("Groq classification error: %s — falling back to keywords", e)
+
+    result = classify_with_keywords(message)
+    return result, "keyword"
 
 
 # ── Keep old names for backward compat ────────────────────────────

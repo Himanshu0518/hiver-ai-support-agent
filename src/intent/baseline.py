@@ -4,6 +4,7 @@ Baseline Intent Classifiers.
 - TF-IDF + Logistic Regression
 Run: python -m src.intent.baseline
 """
+import logging
 import pandas as pd
 import numpy as np
 import os
@@ -16,6 +17,8 @@ from sklearn.metrics import classification_report, accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 
 class MajorityClassifier:
@@ -141,27 +144,27 @@ class TFIDFClassifier:
 
 def train_and_evaluate(classifier, X_train, y_train, X_test, y_test, name):
     """Train and evaluate a classifier."""
-    print(f"\n{'=' * 60}")
-    print(f"{name}")
-    print(f"{'=' * 60}")
-    
+    log.info("\n%s", "=" * 60)
+    log.info("%s", name)
+    log.info("%s", "=" * 60)
+
     # Train
     classifier.fit(X_train, y_train)
-    
+
     # Predict
     y_pred = classifier.predict(X_test)
-    
+
     # Metrics
     accuracy = accuracy_score(y_test, y_pred)
     f1_macro = f1_score(y_test, y_pred, average='macro', zero_division=0)
     f1_weighted = f1_score(y_test, y_pred, average='weighted', zero_division=0)
-    
-    print(f"\nAccuracy: {accuracy:.4f}")
-    print(f"Macro F1: {f1_macro:.4f}")
-    print(f"Weighted F1: {f1_weighted:.4f}")
-    
-    print(f"\nClassification Report:")
-    print(classification_report(y_test, y_pred, zero_division=0))
+
+    log.info("\nAccuracy: %.4f", accuracy)
+    log.info("Macro F1: %.4f", f1_macro)
+    log.info("Weighted F1: %.4f", f1_weighted)
+
+    log.info("\nClassification Report:")
+    log.info("%s", classification_report(y_test, y_pred, zero_division=0))
     
     return {
         'accuracy': accuracy,
@@ -175,19 +178,19 @@ def main():
     """Train and evaluate baseline classifiers."""
     # Load data
     data_path = "data/processed/filtered_conversations.csv"
-    print(f"Loading data from {data_path}...")
+    log.info("Loading data from %s...", data_path)
     df = pd.read_csv(data_path, low_memory=False)
-    print(f"Loaded {len(df):,} conversations")
-    
+    log.info("Loaded %s conversations", f"{len(df):,}")
+
     # Prepare data
     X = df['customer_problem'].fillna('').astype(str).values
     y = df['intent'].values
-    
+
     # Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
-    print(f"\nTrain: {len(X_train):,}, Test: {len(X_test):,}")
+    log.info("\nTrain: %s, Test: %s", f"{len(X_train):,}", f"{len(X_test):,}")
     
     # Results storage
     results = {}
@@ -214,16 +217,16 @@ def main():
     model_dir = "artifacts/intent_model"
     os.makedirs(model_dir, exist_ok=True)
     tfidf.save(os.path.join(model_dir, "tfidf_lr.pkl"))
-    print(f"\nSaved TF-IDF model to {model_dir}/tfidf_lr.pkl")
-    
+    log.info("\nSaved TF-IDF model to %s/tfidf_lr.pkl", model_dir)
+
     # Save results
     results_path = "artifacts/intent_model/baseline_results.json"
     with open(results_path, 'w') as f:
-        json.dump({k: {kk: vv for kk, vv in v.items() if kk != 'predictions'} 
+        json.dump({k: {kk: vv for kk, vv in v.items() if kk != 'predictions'}
                    for k, v in results.items()}, f, indent=2)
-    print(f"Saved results to {results_path}")
-    
-    print("\nDone!")
+    log.info("Saved results to %s", results_path)
+
+    log.info("\nDone!")
 
 
 if __name__ == "__main__":

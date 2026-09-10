@@ -6,11 +6,14 @@ Tiers:
   2. Groq  (fallback)  – structured output via Pydantic
   3. Template fallback  – no LLM needed
 """
+import logging
 import os
 import sys
 from typing import List, Dict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 from src.config import (
     gemini_available,
@@ -127,7 +130,7 @@ def generate(customer_message: str, intent: str, cases: List[Dict] | list) -> Ge
             })
             return result
         except Exception as e:
-            print(f"Gemini generation error: {e} — falling back to Groq")
+            log.warning("Gemini generation error: %s — falling back to Groq", e)
 
     # Try Groq
     if groq_available():
@@ -140,10 +143,43 @@ def generate(customer_message: str, intent: str, cases: List[Dict] | list) -> Ge
             })
             return result
         except Exception as e:
-            print(f"Groq generation error: {e} — falling back to templates")
+            log.warning("Groq generation error: %s — falling back to templates", e)
 
     # Template fallback
     return generate_template(customer_message, intent, cases)
+
+
+def generate_and_provider(customer_message: str, intent: str, cases: List[Dict] | list) -> tuple[GenerationResult, str]:
+    """Generate and return (result, actual_provider_used).
+
+    Provider is one of: 'gemini', 'groq', 'template'.
+    """
+    if gemini_available():
+        try:
+            chain = _get_gemini_chain()
+            result: GenerationResult = chain.invoke({
+                "customer_message": customer_message,
+                "intent": intent,
+                "evidence_text": _format_evidence(cases),
+            })
+            return result, "gemini"
+        except Exception as e:
+            log.warning("Gemini generation error: %s — falling back to Groq", e)
+
+    if groq_available():
+        try:
+            chain = _get_groq_chain()
+            result: GenerationResult = chain.invoke({
+                "customer_message": customer_message,
+                "intent": intent,
+                "evidence_text": _format_evidence(cases),
+            })
+            return result, "groq"
+        except Exception as e:
+            log.warning("Groq generation error: %s — falling back to templates", e)
+
+    result = generate_template(customer_message, intent, cases)
+    return result, "template"
 
 
 # ── Backward-compat aliases ──────────────────────────────────────

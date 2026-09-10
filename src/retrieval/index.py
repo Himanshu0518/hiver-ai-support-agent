@@ -3,6 +3,7 @@ FAISS Vector Index Builder.
 Creates embeddings and FAISS index for historical case retrieval.
 Run: python -m src.retrieval.index
 """
+import logging
 import pandas as pd
 import numpy as np
 import os
@@ -13,6 +14,8 @@ from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 
 # Use a lightweight model for fast embedding
@@ -66,64 +69,64 @@ def build_faiss_index(cases_path, output_dir, sample_size=None):
         output_dir: Directory to save index and metadata
         sample_size: If provided, sample this many cases
     """
-    print(f"Loading cases from {cases_path}...")
+    log.info("Loading cases from %s...", cases_path)
     cases = pd.read_csv(cases_path, low_memory=False)
-    
+
     if sample_size and sample_size < len(cases):
-        print(f"Sampling {sample_size:,} cases...")
+        log.info("Sampling %s cases...", f"{sample_size:,}")
         cases = cases.sample(n=sample_size, random_state=42)
-    
-    print(f"Building index for {len(cases):,} cases...")
-    
+
+    log.info("Building index for %s cases...", f"{len(cases):,}")
+
     # Create embedding documents
-    print("Creating embedding documents...")
+    log.info("Creating embedding documents...")
     documents, metadata = create_embedding_documents(cases)
-    
+
     # Load embedding model
-    print(f"Loading embedding model: {EMBEDDING_MODEL}...")
+    log.info("Loading embedding model: %s...", EMBEDDING_MODEL)
     model = SentenceTransformer(EMBEDDING_MODEL)
-    
+
     # Create embeddings
-    print("Creating embeddings...")
+    log.info("Creating embeddings...")
     embeddings = model.encode(documents, show_progress_bar=True, batch_size=64)
     embeddings = np.array(embeddings, dtype=np.float32)
-    
+
     # Normalize for cosine similarity
     faiss.normalize_L2(embeddings)
-    
+
     # Build FAISS index
-    print("Building FAISS index...")
+    log.info("Building FAISS index...")
     dimension = embeddings.shape[1]
-    
+
     # Use IndexFlatIP for inner product (cosine similarity with normalized vectors)
     index = faiss.IndexFlatIP(dimension)
     index.add(embeddings)
-    
-    print(f"Index size: {index.ntotal:,} vectors")
-    print(f"Embedding dimension: {dimension}")
-    
+
+    log.info("Index size: %s vectors", f"{index.ntotal:,}")
+    log.info("Embedding dimension: %s", dimension)
+
     # Save index and metadata
     os.makedirs(output_dir, exist_ok=True)
-    
+
     index_path = os.path.join(output_dir, "faiss_index.bin")
     faiss.write_index(index, index_path)
-    print(f"Saved FAISS index to {index_path}")
-    
+    log.info("Saved FAISS index to %s", index_path)
+
     metadata_path = os.path.join(output_dir, "index_metadata.json")
     with open(metadata_path, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
-    print(f"Saved metadata to {metadata_path}")
-    
+    log.info("Saved metadata to %s", metadata_path)
+
     # Save documents for reference
     docs_path = os.path.join(output_dir, "embedding_documents.json")
     with open(docs_path, 'w', encoding='utf-8') as f:
         json.dump(documents[:100], f, indent=2, ensure_ascii=False)  # Save first 100 for reference
-    print(f"Saved sample documents to {docs_path}")
-    
+    log.info("Saved sample documents to %s", docs_path)
+
     # Save the case data as well
     cases_sample_path = os.path.join(output_dir, "cases_for_index.csv")
     cases.to_csv(cases_sample_path, index=False)
-    print(f"Saved cases to {cases_sample_path}")
+    log.info("Saved cases to %s", cases_sample_path)
     
     return index, metadata, model
 
@@ -136,7 +139,7 @@ def main():
     # Use a sample for faster builds (increase for production)
     build_faiss_index(cases_path, output_dir, sample_size=10000)
     
-    print("\nDone!")
+    log.info("Done!")
 
 
 if __name__ == "__main__":

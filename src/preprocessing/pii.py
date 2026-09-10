@@ -2,7 +2,10 @@
 PII Sanitization for AmazonHelp conversations.
 Replaces sensitive information with placeholders.
 """
+import logging
 import re
+
+log = logging.getLogger(__name__)
 
 
 # PII patterns
@@ -84,13 +87,13 @@ def main():
         "@12345678 help me please!",
     ]
     
-    print("PII Sanitization Test:")
-    print("=" * 60)
+    log.info("PII Sanitization Test:")
+    log.info("=" * 60)
     for text in test_cases:
         sanitized = sanitize_text(text)
-        print(f"Original:  {text}")
-        print(f"Sanitized: {sanitized}")
-        print()
+        log.info("Original:  %s", text)
+        log.info("Sanitized: %s", sanitized)
+        log.info("")
 
 
 if __name__ == "__main__":

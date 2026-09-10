@@ -2,11 +2,14 @@
 Compare old router vs new learned router on the golden set.
 Run: python -m src.routing.compare_routers
 """
+import logging
 import pandas as pd
 import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+log = logging.getLogger(__name__)
 
 from src.routing.router import Router
 from src.retrieval.reranker import Reranker
@@ -17,7 +20,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 def main():
     golden_path = "data/evaluation/golden_set.csv"
     df = pd.read_csv(golden_path)
-    print(f"Golden set: {len(df)} examples\n")
+    log.info("Golden set: %s examples", f"{len(df)}")
 
     # Try to load retriever
     try:
@@ -32,7 +35,7 @@ def main():
     router = Router(escalation_threshold=0.5)
 
     # Collect results
-    print("Running router on golden set...")
+    log.info("Running router on golden set...")
     preds: list[str] = []
     true_labels: list[str] = []
 
@@ -63,9 +66,9 @@ def main():
         true_labels.append(true_action)
 
     # ── Metrics ───────────────────────────────────────────────────
-    print("\n" + "=" * 60)
-    print("ROUTER EVALUATION ON GOLDEN SET")
-    print("=" * 60)
+    log.info("\n" + "=" * 60)
+    log.info("ROUTER EVALUATION ON GOLDEN SET")
+    log.info("=" * 60)
 
     acc = accuracy_score(true_labels, preds)
     cm = confusion_matrix(true_labels, preds, labels=["auto_handle", "escalate"])
@@ -73,17 +76,17 @@ def main():
     total_esc = sum(1 for t in true_labels if t == "escalate")
     false_auto_rate = false_auto / total_esc if total_esc else 0
 
-    print(f"\n  Accuracy:              {acc:.4f}")
-    print(f"  False Auto-Handle:     {false_auto_rate:.4f} ({false_auto}/{total_esc})")
-    print(f"  Confusion matrix:")
-    print(f"    auto_handle  escalate")
-    print(f"    {cm[0][0]:>5}  {cm[0][1]:>5}")
-    print(f"    {cm[1][0]:>5}  {cm[1][1]:>5}")
+    log.info("\n  Accuracy:              %.4f", acc)
+    log.info("  False Auto-Handle:     %.4f (%s/%s)", false_auto_rate, false_auto, total_esc)
+    log.info("  Confusion matrix:")
+    log.info("    auto_handle  escalate")
+    log.info("    %5d  %5d", cm[0][0], cm[0][1])
+    log.info("    %5d  %5d", cm[1][0], cm[1][1])
 
     # ── Side-by-side examples ─────────────────────────────────────
-    print("\n" + "=" * 60)
-    print("SIDE-BY-SIDE EXAMPLES")
-    print("=" * 60)
+    log.info("\n" + "=" * 60)
+    log.info("SIDE-BY-SIDE EXAMPLES")
+    log.info("=" * 60)
 
     for i, (_, row) in enumerate(df.head(10).iterrows()):
         msg = str(row.get("customer_message", ""))
@@ -101,9 +104,9 @@ def main():
                 pass
 
         result = router.route(intent=intent, confidence=0.8, cases=cases, customer_message=msg)
-        print(f'\n{i+1}. "{msg[:80]}..."')
-        print(f"   Intent: {intent}  True: {true_action}")
-        print(f"   Router: {result.action.value:12s}  risk={result.risk_score:.3f}  {result.reason[:60]}")
+        log.info("\n%s. \"%s...\"", i + 1, msg[:80])
+        log.info("   Intent: %s  True: %s", intent, true_action)
+        log.info("   Router: %-12s  risk=%.3f  %s", result.action.value, result.risk_score, result.reason[:60])
 
 
 if __name__ == "__main__":
