@@ -65,6 +65,20 @@ class AgentState(TypedDict):
 # 2.  NODES
 # ================================================================
 
+# Intents that don't need historical case retrieval
+_SKIP_RETRIEVAL_INTENTS = frozenset({
+    "general_inquiry",
+    "complaint",       # venting — retrieval rarely helps
+})
+
+# Short greeting / thank-you patterns (case-insensitive)
+_GREETING_PATTERNS = frozenset({
+    "hi", "hello", "hey", "thanks", "thank you", "thx", "ty",
+    "good morning", "good evening", "good afternoon",
+    "ok", "okay", "sure", "great", "cool", "bye", "goodbye",
+})
+
+
 def classify_node(state: AgentState) -> dict:
     """Classify the customer message into an intent."""
     message = state["customer_message"]
@@ -77,6 +91,39 @@ def classify_node(state: AgentState) -> dict:
         "classification_reasoning": result.reasoning,
         "used_llm": used_llm,
     }
+
+
+def needs_retrieval_node(state: AgentState) -> dict:
+    """Decide whether retrieval is needed based on intent and message content."""
+    intent = state["intent"]
+    message = state["customer_message"].strip().lower()
+
+    # Check if message is a simple greeting / thank-you
+    is_greeting = message.rstrip("!?.") in _GREETING_PATTERNS
+
+    skip = is_greeting or (
+        intent in _SKIP_RETRIEVAL_INTENTS
+        and state["confidence"] >= 0.85
+        and len(message.split()) <= 8
+    )
+
+    if skip:
+        log.info("Skipping retrieval — intent=%s, greeting=%s", intent, is_greeting)
+
+    # Store empty retrieval results when skipping
+    updates = {}
+    if skip:
+        updates["retrieved_cases"] = []
+        updates["reranked_cases"] = []
+    return updates
+
+
+def _should_retrieve(state: AgentState) -> str:
+    """Branch after needs_retrieval_node."""
+    # If cases were already set to [] by the gate, skip retrieval
+    if state.get("retrieved_cases") is not None:
+        return "route"
+    return "retrieve"
 
 
 def retrieve_node(state: AgentState) -> dict:
@@ -114,7 +161,7 @@ def route_node(state: AgentState) -> dict:
     result: RoutingResult = router.route(
         intent=state["intent"],
         confidence=state["confidence"],
-        cases=state["reranked_cases"],
+        cases=state.get("reranked_cases", []),
         customer_message=state["customer_message"],
     )
     return {
@@ -138,7 +185,7 @@ def generate_node(state: AgentState) -> dict:
     result, gen_provider = generate_and_provider(
         customer_message=state["customer_message"],
         intent=state["intent"],
-        cases=state["reranked_cases"],
+        cases=state.get("reranked_cases", []),
     )
 
     return {
@@ -163,7 +210,7 @@ def escalate_node(state: AgentState) -> dict:
 
 
 # ================================================================
-# 3.  ROUTING FUNCTION
+# 3.  ROUTING FUNCTIONS
 # ================================================================
 
 def should_generate_or_escalate(state: AgentState) -> str:
@@ -182,6 +229,7 @@ def build_graph() -> StateGraph:
     graph = StateGraph(AgentState)
 
     graph.add_node("classify", classify_node)
+    graph.add_node("needs_retrieval", needs_retrieval_node)
     graph.add_node("retrieve", retrieve_node)
     graph.add_node("rerank", rerank_node)
     graph.add_node("route", route_node)
@@ -189,7 +237,18 @@ def build_graph() -> StateGraph:
     graph.add_node("escalate", escalate_node)
 
     graph.set_entry_point("classify")
-    graph.add_edge("classify", "retrieve")
+    graph.add_edge("classify", "needs_retrieval")
+
+    # Conditional: skip retrieval for greetings / trivial intents
+    graph.add_conditional_edges(
+        "needs_retrieval",
+        _should_retrieve,
+        {
+            "retrieve": "retrieve",
+            "route": "route",
+        },
+    )
+
     graph.add_edge("retrieve", "rerank")
     graph.add_edge("rerank", "route")
 

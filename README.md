@@ -61,16 +61,25 @@ The pipeline takes **< 1 minute** on the golden set with keyword/template fallba
                      │
                      ▼
             ┌─────────────────┐
-            │ FAISS Retrieve  │  sentence-transformers + FAISS
-            │  top-10 cases   │
+            │ Needs Retrieval │  Greetings / trivial → skip
+            │   Gate Node     │
             └────────┬────────┘
                      │
-                     ▼
-            ┌─────────────────┐
-            │ Intent-Aware    │  0.60 × semantic + 0.25 × intent + 0.15 × quality
-            │ Rerank (Pydantic)│
-            └────────┬────────┘
-                     │
+              ┌──────┴──────┐
+              │ yes         │ no (greeting/trivial)
+              ▼             │
+     ┌─────────────────┐    │
+     │ FAISS Retrieve  │    │
+     │  top-10 cases   │    │
+     └────────┬────────┘    │
+              │             │
+              ▼             │
+     ┌─────────────────┐    │
+     │ Intent-Aware    │    │
+     │ Rerank (Pydantic)│   │
+     └────────┬────────┘    │
+              │             │
+              └──────┬──────┘
                      ▼
             ┌─────────────────┐
             │ Risk-Based      │  Intent risk + confidence + retrieval quality
@@ -88,6 +97,8 @@ The pipeline takes **< 1 minute** on the golden set with keyword/template fallba
 ```
 
 Every component returns **Pydantic models** (`ClassificationResult`, `RoutingResult`, `GenerationResult`, `RerankedCase`) — no raw dicts pass between modules.
+
+**Retrieval Skip:** Simple greetings (`hi`, `hello`, `thanks`, `bye`), short `general_inquiry`, and `complaint` messages (≤8 words, ≥85% confidence) bypass FAISS entirely — cutting latency from ~30s to ~5s for trivial messages.
 
 ### LLM Fallback Chain
 
