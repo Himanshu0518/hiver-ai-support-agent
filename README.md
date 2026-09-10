@@ -26,7 +26,7 @@ Built with **Google Gemini** (primary) and **Groq** (fast fallback) via LangChai
 
 ```bash
 # Clone and install (one command)
-git clone <repo-url>
+git clone https://github.com/Himanshu0518/hiver-ai-support-agent.git
 cd hiver-ai-support-agent
 uv sync
 
